@@ -1,0 +1,62 @@
+<header class="header">
+  <div class="header__container page2-home">
+    <h2 class="header__title">Header Filmoteka</h2>
+
+    <div class="header-logo-nav__container">
+      <div class="header__logo">
+        <a class="header-logo__link" href="#">
+          <picture class="header-logo__image">
+            <source
+              media=""
+              srcset="
+                ./images/header/logo_page@1x.png 1x,
+                ./images/header/logo_page@2x.png 2x,
+                ./images/header/logo_page@3x.png 3x
+              "
+              type="image/png"
+            />
+            <img src="./images/header/logo_page@1x.png" alt="logo filmoteka" />
+          </picture>
+          <span class="header-logo__text">Filmoteka</span>
+        </a>
+      </div>
+
+      <nav class="header-navigations">
+        <ul class="header-navigations__list">
+          <li class="header-navigations__item is-active">
+            <a class="header-navigations__link" href="#">home</a>
+          </li>
+          <li class="header-navigations__item">
+            <a class="header-navigations__link" href="#">my library</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-searchform__container">
+      <form class="heaer-searchform__form">
+        <input
+          class="header-searchform__input"
+          type="text"
+          autocomplete="off"
+          placeholder="Поиск фильмов"
+        />
+        <button class="header-searchform__button is-hidden" type="submit">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </button>
+      </form>
+    </div>
+    <p class="header__warning-text is-hidden">
+      Search result not successful. Enter the correct movie name and
+    </p>
+  </div>
+</header>

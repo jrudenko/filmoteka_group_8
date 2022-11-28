@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="header__container page1-mylibrary">
+    <h2 class="header__title">Header Filmoteka</h2>
+
+    <div class="header-logo-nav__container">
+      <div class="header__logo">
+        <a class="header-logo__link" href="#">
+          <picture class="header-logo__image">
+            <source
+              media=""
+              srcset="
+                ./images/header/logo_page@1x.png 1x,
+                ./images/header/logo_page@2x.png 2x,
+                ./images/header/logo_page@3x.png 3x
+              "
+              type="image/png"
+            />
+            <img src="./images/header/logo_page@1x.png" alt="logo filmoteka" />
+          </picture>
+          <span class="header-logo__text">Filmoteka</span>
+        </a>
+      </div>
+
+      <nav class="header-navigations">
+        <ul class="header-navigations__list">
+          <li class="header-navigations__item">
+            <a class="header-navigations__link" href="#">home</a>
+          </li>
+          <li class="header-navigations__item is-active">
+            <a class="header-navigations__link" href="#">my library</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="header__search">
+      <ul class="header-search__list">
+        <li class="header-search__item">
+          <button class="header-search__button" type="button">watched</button>
+        </li>
+        <li class="header-search__item">
+          <button class="header-search__button" type="button">queue</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
