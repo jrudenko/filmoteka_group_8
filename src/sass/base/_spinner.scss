@@ -1,0 +1,64 @@
+.spinner__container {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto 20px auto;
+  padding: 0;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 125px;
+    height: 125px;
+    margin-top: 75px;
+  }
+  background-color: transparent;
+  &.is-hidden {
+    display: none;
+  }
+}
+.spinner {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 125px;
+    height: 125px;
+  }
+  background-color: transparent;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.spinner__img {
+  width: 50px;
+  height: 50px;
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 125px;
+    height: 125px;
+  }
+}

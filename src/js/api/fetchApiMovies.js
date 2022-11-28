@@ -29,7 +29,7 @@ export class FetchApiMovies {
       this.setQuery('');
       this.resetPage();
       this.setLoadedHits(response.total_pages);
-      console.log(response.data);
+      // console.log(response.data);
       return response.data;
     } catch (error) {
       return console.log(error);
