@@ -21,9 +21,10 @@
   &__container {
     position: absolute;
 
-    top: 0;
+    top: 20px;
+    left: calc(50% - 280px / 2);
 
-    margin-top: 10px;
+    margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
@@ -37,16 +38,39 @@
     height: 940px;
 
     background-color: #fff;
+    @media screen and (min-width: 768px) {
+      padding-top: 66px;
+      padding-right: 36px;
+      padding-bottom: 40px;
+      padding-left: 36px;
+
+      left: calc(50% - 704px / 2);
+      top: 219px;
+
+      width: 704px;
+      height: 552px;
+    }
+    @media screen and (min-width: 1280px) {
+      padding-top: 16px;
+      padding-right: 16px;
+      padding-left: 16px;
+
+      left: calc(50% - 806px / 2);
+      top: 150px;
+
+      width: 806px;
+      height: 558px;
+    }
   }
   &__button-close {
+    display: block;
+
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 10px;
-    margin-left: 0;
+    margin-left: auto;
 
     padding: 0;
-
-    border: #000000 solid 1px;
 
     top: 16px;
     right: 16px;
@@ -66,6 +90,30 @@
     height: 357px;
 
     border-radius: 5px;
+    @media screen and (min-width: 768px) {
+      margin-right: 68px;
+      margin-bottom: 0;
+
+      width: 264px;
+      height: 374px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-right: 16px;
+      margin-bottom: 0;
+
+      width: 375px;
+      height: 478px;
+    }
+  }
+  &__flex-container {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__description-container {
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
   }
   &__title {
     margin-top: 0;
@@ -83,7 +131,11 @@
   }
   &__description {
     &-list {
-      margin: 0;
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 20px;
+      margin-left: 0;
+
       padding: 0;
 
       list-style-type: none;
@@ -102,6 +154,7 @@
       width: 110px;
 
       margin: 0;
+
       padding: 0;
 
       font-family: 'Roboto';
@@ -124,8 +177,24 @@
 
       color: #000000;
     }
+    &-insert {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      border-radius: 5px;
+
+      height: 16px;
+      background-color: #ff6b01;
+    }
   }
   &__about {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-left: 0;
+
+    padding: 0;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -165,7 +234,7 @@
 
       display: flex;
       align-items: center;
-      text-align: center;
+      justify-content: center;
       text-transform: uppercase;
 
       color: #000000;
