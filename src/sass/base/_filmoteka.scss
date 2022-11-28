@@ -1,0 +1,14 @@
+.filmoteka_list, .library_list {
+display: flex;
+flex-wrap: wrap;
+position: relative;
+
+@media screen and (min-width: 768px) {
+    gap: 32px;
+}
+
+@media screen and (min-width: 1024px) {
+    gap: 16px;
+}
+
+}
