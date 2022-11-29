@@ -7,7 +7,6 @@ import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton'
 import { refs } from './js/refs/refs';
 import { movie__img } from './js/components/modalWindow/modalWindow';
 
-
 import './js/templates/developersModal';
 
 const fetchApiMovies = new FetchApiMovies();
@@ -22,7 +21,7 @@ async function renderMovieList(data) {
 
   (function () {
     const container = document.getElementById('tui-pagination-container');
-    console.log(movies);
+    // console.log(movies);
     const instance = new Pagination(container, {
       page: currentPage,
       totalItems: 400,
@@ -42,5 +41,3 @@ async function renderMovieList(data) {
 
 hiddenButton();
 renderMovieList(data);
-
-

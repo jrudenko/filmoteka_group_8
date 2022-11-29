@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { hiddenSpinner } from '../components/hiddenComponents/spinnerMode';
+import { lengthCheck } from '../components/hiddenComponents/hiddenAllertMesage';
 
 const API_KEY = '20e13b9a04a0b41c58cfa9dd598a635c';
 const BASE_URL = 'https://api.themoviedb.org/3/';
@@ -38,6 +39,9 @@ export class FetchApiMovies {
       this.resetPage();
       this.setLoadedHits(response.data.total_pages);
       hiddenSpinner(true);
+
+      lengthCheck(response.data.results.length);
+
       return response.data;
     } catch (error) {
       hiddenSpinner(true);
@@ -55,6 +59,9 @@ export class FetchApiMovies {
       this.resetPage();
       this.setLoadedHits(response.total_pages); // console.log(response.data);
       hiddenSpinner(true);
+
+      lengthCheck(response.data.results.length);
+
       return response.data;
     } catch (error) {
       hiddenSpinner(true);
@@ -73,6 +80,9 @@ export class FetchApiMovies {
       this.resetPage();
       this.setLoadedHits(response.total_pages);
       hiddenSpinner(true);
+
+      lengthCheck(response.data.results.length);
+
       return response.data;
     } catch (error) {
       hiddenSpinner(true);
@@ -81,13 +91,18 @@ export class FetchApiMovies {
   }
 
   async fullFetch(id) {
+    hiddenSpinner(false);
     const url = `${BASE_URL}${URL_ID}/${id}?${searchParams}`;
 
     try {
       const response = await axios.get(url);
+      hiddenSpinner(true);
+
+      lengthCheck(response.data.results.length);
 
       return response.data;
     } catch (error) {
+      hiddenSpinner(true);
       return console.log(error);
     }
   }
