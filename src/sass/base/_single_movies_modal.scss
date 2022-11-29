@@ -21,12 +21,8 @@
   &__container {
     position: absolute;
 
-    top: 0;
-
-    margin-top: 10px;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
+    top: 20px;
+    left: 20px;    
 
     padding-top: 8px;
     padding-right: 20px;
@@ -37,8 +33,37 @@
     height: 940px;
 
     background-color: #fff;
+    @media screen and (min-width: 768px) {
+      width: 704px;
+      height: 552px;
+
+      padding-top: 40px;
+      padding-right: 72px;
+      padding-bottom: 40px;
+      padding-left: 36px;
+
+      top: 220px;
+      left: 32px;
+  }
+  @media screen and (min-width: 1280px) {
+      width: 806px;
+      height: 558px;
+
+      padding-top: 40px;
+      padding-right: 12px;
+      padding-bottom: 40px;
+      padding-left: 12px;
+
+      top: 150px;
+      left: 237px;
+  }
   }
   &__button-close {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 10px;
@@ -48,13 +73,14 @@
 
     border: #000000 solid 1px;
 
-    top: 16px;
-    right: 16px;
-
-    width: 14px;
-    height: 14px;
+    width: 30px;
+    height: 30px;
   }
   &__picture {
+    position: absolute;
+
+    top: 48px;
+
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 20px;
@@ -66,8 +92,25 @@
     height: 357px;
 
     border-radius: 5px;
+    @media screen and (min-width: 768px) {
+      top: 40px;
+      left: 36px;
+
+      width: 264px;
+      height: 375px;
+    }
+    @media screen and (min-width: 1280px) {
+      left: 12px;
+
+      width: 375px;
+      height: 478px;
+    }
   }
   &__title {
+    position: absolute;
+
+    top: 425px;
+
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 20px;
@@ -80,13 +123,33 @@
     line-height: 1.15;
 
     color: #000000;
+    @media screen and (min-width: 768px) {
+      top: 40px;
+      left: 368px;
+    }
+    @media screen and (min-width: 1280px) {
+      left: 403px;
+      font-size: 30px;
+    }
   }
   &__description {
     &-list {
+      position: absolute;
+
+      top: 468px;
+
       margin: 0;
       padding: 0;
 
       list-style-type: none;
+      @media screen and (min-width: 768px) {
+        top: 80px;
+        left: 368px;
+      }
+      @media screen and (min-width: 1280px) {
+        top: 91px;
+        left: 403px;        
+      }
     }
     &-item {
       display: flex;
@@ -111,6 +174,8 @@
       line-height: 1.33;
 
       color: #8c8c8c;
+
+     
     }
     &-span {
       margin: 0;
@@ -126,6 +191,10 @@
     }
   }
   &__about {
+    position: absolute;
+
+    top: 576px;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -133,14 +202,46 @@
     line-height: 1.67;
 
     color: #000000;
+
+    @media screen and (min-width: 768px) {
+      top: 188px;
+      left: 368px;
+
+      width: 264px;
+      height: 260px;
+    }
+    @media screen and (min-width: 1280px) {
+      top: 200px;
+      left: 403px;   
+      
+      width: 391px;
+      height: 184px;
+    }
   }
   &-add {
     &__list {
+      position: absolute;
+
+      top: 856px;
+      
       margin: 0;
       padding: 0;
       display: flex;
 
       list-style-type: none;
+
+      @media screen and (min-width: 768px) {
+        top: 468px;
+        left: 368px;
+
+        
+      }
+      @media screen and (min-width: 1280px) {
+        top: 403px;
+        left: 411px;   
+        
+        
+      }
     }
     &__item {
       margin: 0;
@@ -181,6 +282,20 @@
         border: #ff6b01 solid 1px;
         color: #fff;
       }
+      @media screen and (min-width: 768px) {
+       width: 125px;        
+      }
+      @media screen and (min-width: 1280px) {
+       width: 136px;        
+      }
     }
   }
+}
+.btn-watch {
+  color: var(--white-text-color);
+  background-color: var(--btn-bcg);
+}
+.rating {
+  color: var(--white-text-color);
+  background-color: var(--btn-bcg);
 }
