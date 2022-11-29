@@ -1,5 +1,7 @@
 import { FetchApiMovies } from './js/api/fetchApiMovies';
 import { renderMovieListMarkup } from './js/templates/movieList';
+import { renderMovieCard } from "./js/templates/movieCard";
+import  * as ModalWind  from "./js/components/modalWindow/modalWindow";
 import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
 
@@ -29,7 +31,9 @@ async function renderMovieList(data) {
     instance.on('afterMove', data => {
       currentPage = data.page;
       fetchApiMovies.fetchWithPage(data.page).then(x => renderMovieList(x));
-      document.querySelector('.gallery').addEventListener('click',(e)=>{console.log(e.target)});
+      document.querySelector('.gallery').addEventListener('click',(e)=>{
+      ModalWind.onClickPicture
+      fetchApiMovies.fullFetch(e.target.id).then(x => renderMovieCard(x))});
     });
   })();
 }
