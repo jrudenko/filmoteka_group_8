@@ -3,8 +3,9 @@ import { renderMovieListMarkup } from './js/templates/movieList';
 import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
 
-import { hiddenButton }  from './js/components/hiddenComponents/hiddenFormButton';
+import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
 import { refs } from './js/refs/refs';
+import { movie__img } from './js/components/modalWindow/modalWindow';
 
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
@@ -29,7 +30,9 @@ async function renderMovieList(data) {
     instance.on('afterMove', data => {
       currentPage = data.page;
       fetchApiMovies.fetchWithPage(data.page).then(x => renderMovieList(x));
-      document.querySelector('.gallery').addEventListener('click',(e)=>{console.log(e.target)});
+      document.querySelector('.gallery').addEventListener('click', e => {
+        console.log(e.target);
+      });
     });
   })();
 }
@@ -38,5 +41,3 @@ hiddenButton();
 renderMovieList(data);
 
 //-----------------------------------------------------
-
-
