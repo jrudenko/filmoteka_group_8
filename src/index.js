@@ -7,6 +7,9 @@ import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton'
 import { refs } from './js/refs/refs';
 import { movie__img } from './js/components/modalWindow/modalWindow';
 
+
+import './js/templates/developersModal';
+
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
 let currentPage = 1;
@@ -40,4 +43,4 @@ async function renderMovieList(data) {
 hiddenButton();
 renderMovieList(data);
 
-//-----------------------------------------------------
+
