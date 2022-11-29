@@ -3,6 +3,9 @@ import { renderMovieListMarkup } from './js/templates/movieList';
 import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
 
+
+import './js/templates/developersModal';
+
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
 
@@ -15,3 +18,6 @@ async function renderMovieList(data) {
 
 hiddenButton();
 renderMovieList(data);
+
+
+
