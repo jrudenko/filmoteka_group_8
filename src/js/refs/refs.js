@@ -6,4 +6,5 @@ export const refs = {
   spinner: document.querySelector('.spinner__container'),
   divBackdrop: document.querySelector('.backdrop'),
   buttonlose: document.querySelector('.singleMovieModal__button-close'),
+  alertMessage: document.querySelector('.header__warning-text'),
 };
