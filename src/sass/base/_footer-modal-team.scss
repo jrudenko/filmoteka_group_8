@@ -32,7 +32,7 @@
     align-items: center;
     justify-content: space-between;
    
-    background-color: #F7F7F7;
+    background-color: #FFFFFF;
     padding-bottom: 13px;
     padding-top: 13px;
     
@@ -46,12 +46,7 @@
     align-items: center;
 }
 
-.dev-set {
-    align-items: center;
-    text-align: center;
-    flex-wrap: wrap;
-    
-}
+
 
 .devcont-item {
     list-style: none;
@@ -78,7 +73,11 @@
     &:hover {
         transform: scale(1.1);
 
-        box-shadow: #ff6b08 0px 1px 4px, rgba(202, 94, 22, 0.5) 0px 0px 0px 3px;
+        box-shadow: #ff6b08 0px 1px 4px, rgba(251, 103, 4, 0.5) 0px 0px 0px 3px;
+
+       
+
+        
     }
 }
 
@@ -102,7 +101,7 @@
 }
 
 .devcont-position {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 16px;
     font-weight: 700;
     color: #ff6b08;
@@ -203,13 +202,13 @@
 
 }
 
-// .icon-close-modal-stud {
-//  color: currentColor;
-// }
+.icon-close-modal-stud {
+ fill: currentColor;
+}
 
 .icon-close-modal-stud {
     position: absolute;
-    top: -7px;
+    top: 5px;
     right: -10px;
     display: block;
     margin: 0;
@@ -218,6 +217,24 @@
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+    color: currentColor;
+
+    &:hover {
+        transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: scale(1);
+            color: #ff6b08;
+           
+        }
+
+}
+
+.dev-title{
+        align-items: center;
+            justify-content: center;
+        font-size: 26px;
+        font-weight: 700;
+        color: #ff6b08;
+        margin-bottom: 20px;
 
 }
 
@@ -225,6 +242,90 @@
 
 
 
+
+
+
+.dev-set {
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+
+.social-network-link {
+    color: #000;
+}
+
+.social-network-box {
+    margin-bottom: 10px;
+}
+
+.social-network-item {
+    &:hover {
+        transform: scale(1.75);
+    }
+}
+
+
+
+.social-network-link .fa-instagram:hover {
+    color: #e4405f;
+    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
+}
+
+.social-network-link .fa-github:hover {
+    color: #333;
+    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
+}
+
+.social-network-link .fa-linkedin:hover {
+    color: #0e76a8;
+    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
+}
+
+.social-network-link .fa-facebook:hover {
+    color: #0e76a8;
+    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
+}
+
+
+.social-network-box {
+    align-items: center;
+}
+
+.social-network-item {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+ .devcont-social-network {
+     margin: 0 auto;
+
+     &:not(:last-child) {
+         margin: 0 20px;
+     }
+ }
+
+ .social-network-item {
+     &:hover {
+         transform: scale(1.5);
+     }
+ }
+}
+
+.social-network-box {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
