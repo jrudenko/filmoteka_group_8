@@ -67,7 +67,7 @@
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 10px;
-    margin-left: 0;
+    margin-left: auto;
 
     padding: 0;
 
@@ -165,6 +165,7 @@
       width: 110px;
 
       margin: 0;
+
       padding: 0;
 
       font-family: 'Roboto';
@@ -188,6 +189,15 @@
       line-height: 1.33;
 
       color: #000000;
+    }
+    &-insert {
+      padding-left: 10px;
+      padding-right: 10px;
+
+      border-radius: 5px;
+
+      height: 16px;
+      background-color: #ff6b01;
     }
   }
   &__about {
@@ -266,7 +276,7 @@
 
       display: flex;
       align-items: center;
-      text-align: center;
+      justify-content: center;
       text-transform: uppercase;
 
       color: #000000;
