@@ -3,6 +3,8 @@ import { renderMovieListMarkup } from './js/templates/movieList';
 import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
 
+import { theme } from './js/components/theme/theme';
+
 import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
 import { refs } from './js/refs/refs';
 import { movie__img } from './js/components/modalWindow/modalWindow';
