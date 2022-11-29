@@ -21,21 +21,25 @@ export function renderMovieListMarkup(movies) {
   refs.moviesList.insertAdjacentHTML('beforeend', moviesList);
 }
 
-function moviesListTemplate({ poster_path, title, release_date, id }) {
+function moviesListTemplate({ poster_path, title, genre_ids, vote_average, release_date, id }) {
+  
   return `
         <li class="movie__item" id="${id}">
           <a hres="#" class="movie__link">
-            <img class="movie__img"
-             width="500"
-             loading="lazy"
-             alt="${title}"
-             src="${imgBaseUrl}${poster_path}" 
-            />
+            
+              <img class="movie__img"
+              width="500"
+              loading="lazy"
+              alt="${title}"
+              src="${imgBaseUrl}${poster_path}" 
+              />
             
             <div class="movie__descr">
               <p class="movie__title">${title}</p>
-              <p class="movie__genre">${title}</p>
-              <p class="movie__year">${release_date}</p>
+              <div class="movie__descr--orange">
+                <p class="movie__genre">${genre_ids[0]}|${release_date.substr(0, 4)}</p>
+                <p class="movie__vote">${vote_average.toFixed(1)}</p>
+              </div>
             </div>
           </a>
         </li>
