@@ -1,4 +1,7 @@
 import { developers } from '../templates/developersCard';
+import '@fortawesome/fontawesome-free/js/brands';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
 
 const refs = {
   footer: document.querySelector('.footer'),
@@ -19,7 +22,7 @@ refs.closeModalBtn.addEventListener('click', onCloseModal);
 
 function personalCard(developers) {
   const markup = developers
-    .map(({ img, name, position }) => {
+    .map(({ img, name, position, telegram, instagram, github, linkedin, facebook  }) => {
       return `
         <li class='devcont-item'>
   <a href="#" class='devcont-link'>
@@ -32,6 +35,37 @@ function personalCard(developers) {
       <p class='devcont-position'>${position}</p>
     </div>
 
+        <div class='devcont-social-network'>
+      <ul class='social-network-box'>
+
+
+        <li class='social-network-item'>
+          <a href="${github}" class='social-network-link'>
+            <i class="icon fab fa-github"></i>
+          </a>
+        </li>
+
+        <li class='social-network-item'>
+          <a href="${linkedin}" class='social-network-link'>
+            <i class="icon fab fa-linkedin"></i>
+          </a>
+
+        <li class='social-network-item'>
+          <a href="${instagram}" class='social-network-link'>
+            <i class="icon fab fa-instagram"></i>
+          </a>
+        </li>
+
+          <li class='social-network-item'>
+          <a href="${facebook}" class='social-network-link'>
+            <i class="icon fab fa-facebook"></i>
+          </a>
+        </li>
+        
+        </li>
+      </ul>
+    </div>
+  </a>
 </li>
         `
     })

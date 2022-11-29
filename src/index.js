@@ -1,13 +1,14 @@
 import { FetchApiMovies } from './js/api/fetchApiMovies';
 import { renderMovieListMarkup } from './js/templates/movieList';
-import { onSubmitForm } from './js/components/inputSearch/searchByName';
-import Pagination from 'tui-pagination';
+// import { onSubmitForm } from './js/components/inputSearch/searchByName';
+// import Pagination from 'tui-pagination';
 
 import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
 import { refs } from './js/refs/refs';
-import { movie__img } from './js/components/modalWindow/modalWindow';
+// import { movie__img } from './js/components/modalWindow/modalWindow';
 
 import './js/templates/developersModal';
+import './js/templates/scroll';
 
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
