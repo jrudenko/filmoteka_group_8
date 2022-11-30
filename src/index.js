@@ -8,6 +8,7 @@ import { theme } from './js/components/theme/theme';
 import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
 import { refs } from './js/refs/refs';
 import { movie__img } from './js/components/modalWindow/modalWindow';
+import { visibleSingleMovieModal } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
 
 import './js/templates/developersModal';
 import './js/templates/scroll';
@@ -15,6 +16,8 @@ import './js/templates/scroll';
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
 let currentPage = 1;
+
+// visibleSingleMovieModal(true);
 
 async function renderMovieList(data) {
   const response = await data;
