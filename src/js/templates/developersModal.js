@@ -6,8 +6,8 @@ import '@fortawesome/fontawesome-free/js/solid';
 const refs = {
   footer: document.querySelector('.footer'),
     
-  openModalBtn: document.querySelector('[data-action="open-modal"]'),
-  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+  openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
   backdropTeam: document.querySelector('.js-backdrop'),
 
   team: document.querySelector('.dev-set'),
@@ -16,9 +16,9 @@ const refs = {
 const developersBoard = document.querySelector('.js-dev-set');
 developersBoard.innerHTML = personalCard(developers);
 
-refs.openModalBtn.addEventListener('click', onOpenModal);
+refs.openModalBtnFoot.addEventListener('click', onOpenModal);
 refs.backdropTeam.addEventListener('click', onBackdropClick);
-refs.closeModalBtn.addEventListener('click', onCloseModal);
+refs.closeModalBtnFoot.addEventListener('click', onCloseModal);
 
 function personalCard(developers) {
   const markup = developers
@@ -77,14 +77,14 @@ function onOpenModal() {
   window.addEventListener('keydown', onEscKeyPress);
   refs.backdropTeam.classList.remove('is-hidden');
   refs.backdropTeam.classList.remove('show-modal');
-  refs.body.classList.add('overhidden');
+  
 }
 
 function onCloseModal() {
   window.removeEventListener('keydown', onEscKeyPress);
   refs.backdropTeam.classList.remove('show-modal');
   refs.backdropTeam.classList.add('is-hidden');
-  refs.body.classList.remove('overhidden');
+  
 }
 
 function onBackdropClick(event) {
