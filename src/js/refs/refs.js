@@ -7,4 +7,7 @@ export const refs = {
   divBackdrop: document.querySelector('.backdrop'),
   buttonlose: document.querySelector('.singleMovieModal__button-close'),
   alertMessage: document.querySelector('.header__warning-text'),
+  watchedButton: document.querySelector('button[data-action="addToWatched"]'),
+  queueButton: document.querySelector('button[data-action="addToQueue"]'),
+  libraryList: document.querySelector('.library_list'),
 };
