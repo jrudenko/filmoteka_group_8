@@ -7,7 +7,7 @@ function onClickPicture(evt) {
   if (evt.target.nodeName !== 'IMG') {
     return;
   }
-  
+
   refs.divBackdrop.classList.remove('is-hidden');
   window.addEventListener('keydown', onKeyPress);
   window.addEventListener('click', onClick);
