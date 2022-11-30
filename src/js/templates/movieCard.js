@@ -5,7 +5,7 @@ let imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
 const noPosterImg = noPosterImage;
 
 export function renderMovieCard(movie) {
-  refs.modal.innerHTML = '';
+  refs.divBackdrop.innerHTML = '';
 
   if (movie.poster_path === null) {
     imgBaseUrl = '';
@@ -16,7 +16,7 @@ export function renderMovieCard(movie) {
 
   movieModal = movieCardTemplate(movie);
 
-  refs.modal.insertAdjacentHTML('beforeend', movieModal);
+  refs.divBackdrop.insertAdjacentHTML('beforeend', movieModal);
 }
 
 function movieCardTemplate({
@@ -29,7 +29,56 @@ function movieCardTemplate({
   poster_path,
 }) {
   return `
-   <div class="film">
+  <div class="singleMovieModal__container">
+      <img class="singleMovieModal__picture" src="${imgBaseUrl}${poster_path}" alt="" />
+
+    <h2 class="singleMovieModal__title">${title}</h2>
+    <ul class="singleMovieModal__description-list">
+      <li class="singleMovieModal__description-item">
+        <p class="singleMovieModal__description-text">Vote / Votes</p>
+        <p class="singleMovieModal__description-span"><span class="rating">${vote_average}</span> / ${vote_count}</p>
+      </li>
+      <li class="singleMovieModal__description-item">
+        <p class="singleMovieModal__description-text">Popularity</p>
+        <p class="singleMovieModal__description-span">${popularity}</p>
+      </li>
+      <li class="singleMovieModal__description-item">
+        <p class="singleMovieModal__description-text">Original Title</p>
+        <p class="singleMovieModal__description-span">${original_title}</p>
+      </li>
+      <li class="singleMovieModal__description-item">
+        <p class="singleMovieModal__description-text">Genre</p>
+        <p class="singleMovieModal__description-span">Western</p>
+      </li>
+    </ul>
+    <p class="singleMovieModal__about">
+      Four of the West’s most infamous outlaws assemble to steal a huge stash of
+      gold from the most corrupt settlement of the gold rush towns. But not all
+      goes to plan one is killed and the other three escapes with bags of gold
+      hide out in the abandoned gold mine where they happen across another gang
+      of three – who themselves were planning to hit the very same bank! As
+      tensions rise, things go from bad to worse as they realise the bags of
+      gold are filled with lead... they’ve been double crossed – but by who and
+      how?
+    </p>
+    <ul class="singleMovieModal-add__list">
+      <li class="singleMovieModal-add__item">
+        <button class="singleMovieModal-add__button btn-watch" type="button">
+          add to Watched
+        </button>
+      </li>
+      <li class="singleMovieModal-add__item">
+        <button class="singleMovieModal-add__button" type="button">
+          add to queue
+        </button>
+      </li>
+    </ul>
+      
+    </div>
+  `;
+}
+/*
+ <div class="film">
     <div class="film__box">
       <img class="film__img" src="${imgBaseUrl}${poster_path}" alt="" width="500" />
     </div>
@@ -69,5 +118,4 @@ function movieCardTemplate({
       </div>
     </div>
   </div>
-  `;
-}
+*/
