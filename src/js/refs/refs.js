@@ -9,9 +9,9 @@ export const refs = {
   buttonlose: document.querySelector('.singleMovieModal__button-close'),
   alertMessage: document.querySelector('.header__warning-text'),
 
-  // watchedButton: document.querySelector('button[data-action="addToWatched"]'),
-  // queueButton: document.querySelector('button[data-action="addToQueue"]'),
-  // libraryList: document.querySelector('.library_list'),
+  watchedButton: document.querySelector('button[data-action="addToWatched"]'),
+  queueButton: document.querySelector('button[data-action="addToQueue"]'),
+  libraryList: document.querySelector('.library_list'),
 
   closeSingleMovieModalButton: document.querySelector(
     '.singleMovieModal__button-close'
