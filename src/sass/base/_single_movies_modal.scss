@@ -8,7 +8,6 @@
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -18,7 +17,6 @@
     }
   }
 }
-
 .singleMovieModal {
   &__container {
     position: absolute;
@@ -35,7 +33,6 @@
     height: 940px;
 
     background-color: #fff;
-
     @media screen and (min-width: 768px) {
       width: 704px;
       height: 552px;
@@ -48,7 +45,6 @@
       top: 220px;
       left: 32px;
     }
-
     @media screen and (min-width: 1280px) {
       width: 806px;
       height: 558px;
@@ -62,7 +58,6 @@
       left: 237px;
     }
   }
-
   &__button-close {
     position: absolute;
 
@@ -81,7 +76,6 @@
     width: 30px;
     height: 30px;
   }
-
   &__picture {
     position: absolute;
 
@@ -98,7 +92,6 @@
     height: 357px;
 
     border-radius: 5px;
-
     @media screen and (min-width: 768px) {
       top: 40px;
       left: 36px;
@@ -106,7 +99,6 @@
       width: 264px;
       height: 375px;
     }
-
     @media screen and (min-width: 1280px) {
       left: 12px;
 
@@ -114,7 +106,6 @@
       height: 478px;
     }
   }
-
   &__title {
     position: absolute;
 
@@ -132,18 +123,15 @@
     line-height: 1.15;
 
     color: #000000;
-
     @media screen and (min-width: 768px) {
       top: 40px;
       left: 368px;
     }
-
     @media screen and (min-width: 1280px) {
       left: 403px;
       font-size: 30px;
     }
   }
-
   &__description {
     &-list {
       position: absolute;
@@ -154,18 +142,15 @@
       padding: 0;
 
       list-style-type: none;
-
       @media screen and (min-width: 768px) {
         top: 80px;
         left: 368px;
       }
-
       @media screen and (min-width: 1280px) {
         top: 91px;
         left: 403px;
       }
     }
-
     &-item {
       display: flex;
 
@@ -176,7 +161,6 @@
         margin-bottom: 8px;
       }
     }
-
     &-text {
       width: 110px;
 
@@ -191,9 +175,7 @@
       line-height: 1.33;
 
       color: #8c8c8c;
-
     }
-
     &-span {
       margin: 0;
       padding: 0;
@@ -206,7 +188,6 @@
 
       color: #000000;
     }
-
     &-insert {
       padding-left: 10px;
       padding-right: 10px;
@@ -217,7 +198,6 @@
       background-color: #ff6b01;
     }
   }
-
   &__about {
     position: absolute;
 
@@ -238,7 +218,6 @@
       width: 264px;
       height: 260px;
     }
-
     @media screen and (min-width: 1280px) {
       top: 200px;
       left: 403px;
@@ -247,7 +226,6 @@
       height: 184px;
     }
   }
-
   &-add {
     &__list {
       position: absolute;
@@ -264,18 +242,14 @@
         margin: 0 0 0 -130px;
         top: 468px;
         left: 368px;
-
       }
-
       @media screen and (min-width: 1280px) {
         margin: 0;
         margin: 0;
         top: 403px;
         left: 411px;
-
       }
     }
-
     &__item {
       margin: 0;
       padding: 0;
@@ -284,10 +258,8 @@
         margin-right: 15px;
       }
     }
-
     &__button,
     &__trailer {
-
       cursor: pointer;
       width: 70px;
       height: 55px;
@@ -318,27 +290,20 @@
         border: #ff6b01 solid 1px;
         color: #fff;
       }
-
       @media screen and (min-width: 768px) {
         width: 125px;
         height: 44px;
-
       }
-
       @media screen and (min-width: 1280px) {
-
-        width: 136px;
-
+        width: 115px;
       }
     }
   }
 }
-
 .btn-watch {
   color: var(--white-text-color);
   background-color: var(--btn-bcg);
 }
-
 .rating {
   color: var(--white-text-color);
   background-color: var(--btn-bcg);

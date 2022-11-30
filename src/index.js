@@ -14,7 +14,6 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 
 import './js/templates/developersModal';
 import './js/templates/scroll';
-import './js/templates/localStorage'
 
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
