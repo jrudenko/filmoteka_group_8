@@ -1,4 +1,5 @@
 import { refs } from '../../refs/refs';
+import { hiddenButton } from '../hiddenComponents/hiddenFormButton';
 
 function hiddenAllertMessage(bool) {
   if (bool) {
@@ -11,7 +12,9 @@ function hiddenAllertMessage(bool) {
 export function lengthCheck(lenght) {
   if (lenght === 0) {
     hiddenAllertMessage(true);
+    hiddenButton(true);
   } else if (lenght !== 0) {
     hiddenAllertMessage(false);
+    hiddenButton(false);
   }
 }
