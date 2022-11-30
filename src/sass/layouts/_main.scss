@@ -89,6 +89,9 @@ img.movie__img {
     font-weight: 500;
     font-size: 12px;
     line-height: 1,1;
+
+    display: flex;
+    flex-wrap: wrap;
 }
 .movie__title {    
     color: var(--black-text-color);
@@ -117,4 +120,7 @@ img.movie__img {
     background-color: var(--btn-bcg);
     color: var(--white-text-color);
     
+}
+.movie__genre {
+color: var(--btn-bcg);
 }

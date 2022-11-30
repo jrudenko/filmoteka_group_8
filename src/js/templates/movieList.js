@@ -46,11 +46,9 @@ function moviesListTemplate({
              <li class="card__genre"><a href="" class="movie__genre">Action,</a></li>
              <li class="card__genre"><a href="" class="movie__genre">Adventure,</a></li>
              <li class="card__genre"><a href="" class="movie__genre">Mystery</a></li>
-             <li class="movie__genre">${genre_ids[0]}|${release_date.substr(
-    0,
-    4
-  )}</li>
-  <li class="movie__vote">${vote_average.toFixed(1)}</li>
+             <li class="movie__genre">${genre_ids[0]}</li>
+             <li class="movie__genre"> | ${release_date.substr(0, 4)}</li>
+             <li class="movie__vote">${vote_average.toFixed(1)}</li>
             </ul>
             </div>
           </a>
