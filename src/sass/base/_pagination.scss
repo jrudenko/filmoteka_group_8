@@ -224,4 +224,8 @@ body .tui-pagination .tui-is-selected:hover {
 #tui-pagination-container {
   margin-top: 25px;
   margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
