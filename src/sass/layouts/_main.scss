@@ -92,10 +92,11 @@ img.movie__img {
 }
 .movie__title {    
     color: var(--black-text-color);
+    text-transform: uppercase;
 }
 .movie__descr--orange {
     display: flex;
-
+    flex-wrap: wrap;
     margin-top: 2px;
 
     color: var(--btn-bcg);
