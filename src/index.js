@@ -9,6 +9,7 @@ import { movie__img } from './js/components/modalWindow/modalWindow';
 
 import './js/templates/developersModal';
 import './js/templates/scroll';
+import './js/templates/localStorage'
 
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
