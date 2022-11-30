@@ -24,16 +24,16 @@ export function renderMovieListMarkup(movies) {
 function moviesListTemplate({ poster_path, title, genre_ids, vote_average, release_date, id }) {
   
   return `
-        <li class="movie__item" id="${id}">
+        <li class="movie__item">
           <a hres="#" class="movie__link">
-            
-              <img class="movie__img"
+             <div class="thumb"> 
+              <img class="movie__img" id="${id}"
               width="500"
               loading="lazy"
               alt="${title}"
               src="${imgBaseUrl}${poster_path}" 
               />
-            
+            </div>
             <div class="movie__descr">
               <p class="movie__title">${title}</p>
               <div class="movie__descr--orange">

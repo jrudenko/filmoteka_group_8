@@ -8,4 +8,8 @@ export const refs = {
   divBackdrop: document.querySelector('#modalSingleMovie'),
   buttonlose: document.querySelector('.singleMovieModal__button-close'),
   alertMessage: document.querySelector('.header__warning-text'),
+  closeSingleMovieModalButton: document.querySelector(
+    '.singleMovieModal__button-close'
+  ),
+  singleMovieModal: document.querySelector('#modalSingleMovie'),
 };
