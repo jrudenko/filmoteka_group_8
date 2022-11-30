@@ -22,7 +22,7 @@ refs.closeModalBtn.addEventListener('click', onCloseModal);
 
 function personalCard(developers) {
   const markup = developers
-    .map(({ img, name, position, telegram, instagram, github, linkedin, facebook  }) => {
+    .map(({ img, name, position, instagram, github, linkedin, facebook  }) => {
       return `
         <li class='devcont-item'>
   <a href="#" class='devcont-link'>
