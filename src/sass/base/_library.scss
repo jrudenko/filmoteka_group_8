@@ -1,0 +1,10 @@
+.library-image {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  &__container {
+    width: 100%;
+    &.is-hidden {
+      display: none;
+    }
+  }
+}
