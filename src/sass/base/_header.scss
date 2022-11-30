@@ -208,14 +208,14 @@
       margin-bottom: 0;
       margin-left: auto;
 
-      width: 280px;
+      width: 230px;
       height: 20px;
     }
     &__input {
       margin: 0;
       padding: 0;
 
-      width: 280px;
+      width: 230px;
       height: 20px;
 
       border: none;
@@ -239,7 +239,9 @@
     }
     &__button {
       &.is-hidden {
-        display: none;
+        @media screen and (max-width: 767px) {
+          display: none;
+        }
       }
       position: absolute;
 
