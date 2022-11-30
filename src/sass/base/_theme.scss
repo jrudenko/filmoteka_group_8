@@ -1,0 +1,28 @@
+html.dark,
+.dark body {
+  font-size: 18px;
+  font-family: sans-serif;
+  background: -webkit-linear-gradient(
+    180deg,
+    rgb(56, 17, 17) 4%,
+    rgb(26, 26, 26) 27%
+  );
+  background: -moz-linear-gradient(
+    180deg,
+    rgb(56, 17, 17) 4%,
+    rgb(26, 26, 26) 27%
+  );
+  background: linear-gradient(180deg, rgb(56, 17, 17) 4%, rgb(26, 26, 26) 27%);
+  color: #fff;
+}
+
+.dark a {
+  color: #fff;
+}
+
+.theme {
+  margin-right: 20px;
+}
+.material-icons {
+  color: white;
+}
