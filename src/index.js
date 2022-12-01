@@ -52,7 +52,7 @@ async function renderMovieList(data) {
 document.querySelector('.gallery').addEventListener('click', e => {
   ModalWind.onClickPicture;
   fetchApiMovies.fullFetch(e.target.id).then(x => {
-    console.log(x);
+    // console.log(x);
     renderMovieCard(x);
 
     // document
