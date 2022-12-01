@@ -1,8 +1,8 @@
 import { refs } from '../refs/refs';
-import noPosterImage from '../../images/header/no-poster.jpeg';
+// import noPosterImage from '../../images/header/no-poster.jpeg';
 
 let imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
-let noPosterImg = noPosterImage;
+// let noPosterImg = noPosterImage;
 
 export function renderMovieListMarkup(movies) {
   refs.moviesList.innerHTML = '';
@@ -10,7 +10,7 @@ export function renderMovieListMarkup(movies) {
     .map(movie => {
       if (movie.poster_path === null) {
         imgBaseUrl = '';
-        movie.poster_path = noPosterImg;
+        // movie.poster_path = noPosterImg;
       } else {
         imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
       }
