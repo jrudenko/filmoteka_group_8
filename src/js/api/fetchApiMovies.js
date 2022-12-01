@@ -91,18 +91,20 @@ export class FetchApiMovies {
   }
 
   async fullFetch(id) {
-    hiddenSpinner(false);
+    // console.log('id', id);
+    // hiddenSpinner(false);
+    // https://api.themoviedb.org/3/movie/343611?api_key={api_key}
     const url = `${BASE_URL}${URL_ID}/${id}?${searchParams}`;
 
     try {
       const response = await axios.get(url);
-      hiddenSpinner(true);
+      // hiddenSpinner(true);
 
-      lengthCheck(response.data.results.length);
+      // lengthCheck(response.data.results.length);
 
       return response.data;
     } catch (error) {
-      hiddenSpinner(true);
+      // hiddenSpinner(true);
       return console.log(error);
     }
   }
