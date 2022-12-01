@@ -8,8 +8,8 @@ import Pagination from 'tui-pagination';
 import { theme } from './js/components/theme/theme';
 
 // import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
-import { refs } from './js/refs/refs';
-import { movie__img } from './js/components/modalWindow/modalWindow';
+// import { refs } from './js/refs/refs';
+// import { movie__img } from './js/components/modalWindow/modalWindow';
 import { visibleSingleMovieModal } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
 
 import './js/templates/developersModal';
