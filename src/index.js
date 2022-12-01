@@ -49,5 +49,19 @@ async function renderMovieList(data) {
   })();
 }
 
+document.querySelector('.gallery').addEventListener('click', e => {
+  onClickPicture.onClickPicture;
+  fetchApiMovies.fullFetch(e.target.id).then(x => {
+    // console.log(x);
+    renderMovieCard(x);
+
+    // document
+    //   .querySelector('.btn-watch')
+    //   .addEventListener('click', () =>
+    //     localStorage.setItem(`${x.id}`, JSON.stringify(x))
+    //   );
+  });
+});
+
 hiddenButton();
 renderMovieList(data);
