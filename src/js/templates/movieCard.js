@@ -2,7 +2,7 @@ import { refs } from '../refs/refs';
 import noPosterImage from '../../images/header/no-poster.jpeg';
 
 let imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
-const noPosterImg = noPosterImage;
+let noPosterImg = noPosterImage;
 
 export function renderMovieCard(movie) {
   refs.divBackdrop.innerHTML = '';
