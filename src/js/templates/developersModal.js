@@ -8,7 +8,7 @@ const refs = {
     
   openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
   closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
-  backdropTeam: document.querySelector('.js-backdrop'),
+  backdropTeamFoot: document.querySelector('.js-backdrop'),
 
   team: document.querySelector('.dev-set'),
 }
@@ -17,7 +17,7 @@ const developersBoard = document.querySelector('.js-dev-set');
 developersBoard.innerHTML = personalCard(developers);
 
 refs.openModalBtnFoot.addEventListener('click', onOpenModal);
-refs.backdropTeam.addEventListener('click', onBackdropClick);
+refs.backdropTeamFoot.addEventListener('click', onBackdropClick);
 refs.closeModalBtnFoot.addEventListener('click', onCloseModal);
 
 function personalCard(developers) {
@@ -46,11 +46,6 @@ function personalCard(developers) {
         </li>
 
         <li class='social-network-item'>
-          <a href="${linkedin}" class='social-network-link'>
-            <i class="icon fab fa-linkedin"></i>
-          </a>
-
-        <li class='social-network-item'>
           <a href="${instagram}" class='social-network-link'>
             <i class="icon fab fa-instagram"></i>
           </a>
@@ -61,6 +56,11 @@ function personalCard(developers) {
             <i class="icon fab fa-facebook"></i>
           </a>
         </li>
+
+        <li class='social-network-item'>
+          <a href="${linkedin}" class='social-network-link'>
+            <i class="icon fab fa-linkedin"></i>
+          </a>
         
         </li>
       </ul>
@@ -75,15 +75,15 @@ function personalCard(developers) {
 
 function onOpenModal() {
   window.addEventListener('keydown', onEscKeyPress);
-  refs.backdropTeam.classList.remove('is-hidden');
-  refs.backdropTeam.classList.remove('show-modal');
+  refs.backdropTeamFoot.classList.remove('is-hidden');
+  refs.backdropTeamFoot.classList.remove('show-modal');
   
 }
 
 function onCloseModal() {
   window.removeEventListener('keydown', onEscKeyPress);
-  refs.backdropTeam.classList.remove('show-modal');
-  refs.backdropTeam.classList.add('is-hidden');
+  refs.backdropTeamFoot.classList.remove('show-modal');
+  refs.backdropTeamFoot.classList.add('is-hidden');
   
 }
 
@@ -101,6 +101,5 @@ function onEscKeyPress(event) {
     onCloseModal();
   }
 }
-
 
 

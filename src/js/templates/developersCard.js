@@ -67,7 +67,7 @@ export const developers = [
   },
 
    {
-    name: 'Dmytro Kylymnyk',
+    name: 'Dmytro Kilimnik',
     img: 'https://avatars.githubusercontent.com/u/104536061?v=4',
      position: 'Developer',
      github: 'https://github.com/DimaKIL',
@@ -101,7 +101,7 @@ export const developers = [
   },
               
   {
-    name: 'Sviatoslav',
+    name: 'Sviatoslav Navolskiy',
     img: 'https://avatars.githubusercontent.com/u/106432553?v=4',
     position: 'Developer',
      github: 'https://github.com/Sviatoslav43',
@@ -121,7 +121,16 @@ export const developers = [
     facebook: 'https://www.facebook.com/',
  
   },
-                           
+
+    {
+    name: 'Artem Kolesnik',
+    img: 'https://avatars.githubusercontent.com/u/83580554?v=4',
+    position: 'Developer',
+     github: 'https://github.com/ArtemKolesnyk',
+    linkedin: 'https://www.linkedin.com/',
+    instagram: 'https://www.instagram.com/',
+    facebook: 'https://www.facebook.com/',
  
+  },
                                   
 ];
