@@ -9,6 +9,8 @@
 }
 
 .footer__container {
+            padding-left: 71px;
+        padding-right: 71px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 0;
@@ -27,7 +29,7 @@
         padding-right: 75px;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 1279px) {
         width: 1024px;
         padding-left: 71px;
         padding-right: 71px;
@@ -107,12 +109,26 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #ff6b08;
+    border: 2px solid #ff6b08;
+    // background-color: #ff6b08;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    color: white;
+    // color: white;
+    color: #ff6b08;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+            width: 25px;
+                height: 25px;
+        }
+
+
+        @media screen and (min-width: 768px) and (max-width: 1079px) {
+        width: 35px;
+            height: 35px;
+
+    }
 }
 
 .btn-on-top--visible {
@@ -123,6 +139,7 @@
 .btn-load-more:hover,
 .btn-on-top:hover {
     background-color: #f7883f;
+    color: white;
     transition: all 0.5s;
 }
 
