@@ -4,7 +4,7 @@ import { visibleSingleMovieModal } from '../hiddenComponents/hiddenSingleMovieMo
 refs.moviesList.addEventListener('click', onClickPicture);
 // refs.buttonlose.addEventListener('click', onClose);
 
-function onClickPicture(evt) {
+export function onClickPicture(evt) {
   if (evt.target.nodeName !== 'IMG') {
     return;
   }
