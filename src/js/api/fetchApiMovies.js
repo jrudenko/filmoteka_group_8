@@ -41,7 +41,6 @@ export class FetchApiMovies {
       hiddenSpinner(true);
 
       lengthCheck(response.data.results.length);
-
       return response.data;
     } catch (error) {
       hiddenSpinner(true);

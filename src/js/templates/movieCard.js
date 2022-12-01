@@ -15,7 +15,7 @@ export function renderMovieCard(movie) {
   }
 
   movieModal = movieCardTemplate(movie);
-
+  
   refs.divBackdrop.insertAdjacentHTML('beforeend', movieModal);
 }
 
@@ -63,12 +63,12 @@ function movieCardTemplate({
     </p>
     <ul class="singleMovieModal-add__list">
       <li class="singleMovieModal-add__item">
-        <button class="singleMovieModal-add__button btn-watch" type="button">
+        <button class="singleMovieModal-add__button  btn-watch" type="button">
           add to Watched
         </button>
       </li>
       <li class="singleMovieModal-add__item">
-        <button class="singleMovieModal-add__button" type="button">
+        <button class="singleMovieModal-add__button"  type="button">
           add to queue
         </button>
       </li>

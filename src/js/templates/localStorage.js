@@ -1,54 +1,44 @@
-// import { refs } from '../refs/refs';
+import { refs } from '../refs/refs';
+import { renderMovieListMarkup } from './movieList';
+import { FetchApiMovies } from "../api/fetchApiMovies";
+import { renderMovieCard } from "./movieCard";
 
-// refs.queueButton.addEventListener('click', addFilmToQueueList);
-// refs.watchedButton.addEventListener('click', addFilmToWatchedList);
 
-// // WATCHED
-// let watchedFilms = [];
-// const STORAGE_KEY_WATCHED = "watched-films"
 
-// function addFilmToWatchedList() {
-//     saveWatchedFilms();
-//     watchedFilms.push(movie);
-//     showWatchedFilms();
-// }
+refs.queueButton.addEventListener('click', addFilmToQueueList);
+refs.watchedButton.addEventListener('click', addFilmToWatchedList);
 
-// function saveWatchedFilms(movie) {
-//     localStorage.setItem(STORAGE_KEY_WATCHED, JSON.stringify(watchedFilms));
-// }
+const fetchApiMovies = new FetchApiMovies();
+ const renderFilm = fetchApiMovies.fetchTrending().then(movies => {
+        console.log(movies.results);
+    })
 
-// function showWatchedFilms() {
-//     const watched = localStorage.getItem(STORAGE_KEY_WATCHED);
-//       let watchedFilmsMarkup = '';
-//     JSON.parse(watched).forEach(object => {
-//       watchedFilmsMarkup +=
-//         '<li class="library__list-item">' + object.element + '</li>';
-//     });
 
-//     refs.libraryList.innerHTML = watchedFilmsMarkup;
-// }
+// WATCHED
+let watchedFilms = [];
+const STORAGE_KEY_WATCHED = "watched-films"
 
-// // QUEUE
-// let queueFilm = [];
-// const STORAGE_KEY_QUEUE = "queue-films"
+function addFilmToWatchedList() {
+   
+    watchedFilms.push(renderFilm)
+    saveWatchedFilms();
+}
 
-// function addFilmToQueueList() {
-//     saveQueueFilms();
-//     queueFilm.push(movie);
-//     showQueueFilms();
-// }
+function saveWatchedFilms() {
+    localStorage.setItem(STORAGE_KEY_WATCHED, JSON.stringify(watchedFilms));
+}
 
-// function saveQueueFilms(movie) {
-//     localStorage.setItem(STORAGE_KEY_QUEUE, JSON.stringify(queueFilm));
-// }
 
-// function showQueueFilms() {
-//     const queue = localStorage.getItem(STORAGE_KEY_QUEUE);
-//       let queueFilmsMarkup = '';
-//     JSON.parse(queue).forEach(object => {
-//       queueFilmsMarkup +=
-//         '<li class="library__list-item">' + object.element + '</li>';
-//     });
+// QUEUE
+let queueFilm = [];
+const STORAGE_KEY_QUEUE = "queue-films"
 
-//     refs.libraryList.innerHTML = queueFilmsMarkup;
-// }
+function addFilmToQueueList() {
+    queueFilm.push(renderFilm);
+    saveQueueFilms()
+}
+
+function saveQueueFilms() {
+    localStorage.setItem(STORAGE_KEY_QUEUE, JSON.stringify(queueFilm));
+}
+

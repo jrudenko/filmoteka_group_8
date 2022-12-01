@@ -1,10 +1,17 @@
 <div class="backdrop is-hidden" id="modalSingleMovie">
   <div class="singleMovieModal__container">
     <button class="singleMovieModal__button-close" type="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
-        viewBox="0 0 16 16">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-x-lg"
+        viewBox="0 0 16 16"
+      >
         <path
-          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+        />
       </svg>
     </button>
 
@@ -45,12 +52,20 @@
         </p>
         <ul class="singleMovieModal-add__list">
           <li class="singleMovieModal-add__item">
-            <button class="singleMovieModal-add__button" type="button">
+            <button
+              class="singleMovieModal-add__button"
+              data-action="addToWatched"
+              type="button"
+            >
               add to Watched
             </button>
           </li>
           <li class="singleMovieModal-add__item">
-            <button class="singleMovieModal-add__button" type="button">
+            <button
+              class="singleMovieModal-add__button"
+              data-action="addToQueue"
+              type="button"
+            >
               add to queue
             </button>
           </li>
