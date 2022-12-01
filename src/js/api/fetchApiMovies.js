@@ -8,6 +8,7 @@ const BASE_URL = 'https://api.themoviedb.org/3/';
 const URL_TRENDING = 'trending/movie/day';
 const URL_KEY = 'search/movie';
 const URL_ID = 'movie';
+const GENRE_URL = 'genre/movie/list';
 
 const searchParams = new URLSearchParams({
   api_key: API_KEY,
@@ -22,6 +23,28 @@ export class FetchApiMovies {
     this.page = 1;
     this.loadedHits = 0;
   }
+
+  async fetchTrending() {
+    hiddenSpinner(false);
+    const url = `${BASE_URL}${URL_TRENDING}?${searchParams}`;
+
+    try {
+      const response = await axios.get(url);
+
+      this.setQuery('');
+      this.resetPage();
+      this.setLoadedHits(response.total_pages); // console.log(response.data);
+      hiddenSpinner(true);
+
+      lengthCheck(response.data.results.length);
+
+      return response.data;
+    } catch (error) {
+      hiddenSpinner(true);
+      return console.log(error);
+    }
+  }
+
   async fetchWithPage(pageNumber) {
     hiddenSpinner(false);
     const searchParams = new URLSearchParams({
@@ -38,26 +61,6 @@ export class FetchApiMovies {
       this.setQuery('');
       this.resetPage();
       this.setLoadedHits(response.data.total_pages);
-      hiddenSpinner(true);
-
-      lengthCheck(response.data.results.length);
-
-      return response.data;
-    } catch (error) {
-      hiddenSpinner(true);
-      return console.log(error);
-    }
-  }
-  async fetchTrending() {
-    hiddenSpinner(false);
-    const url = `${BASE_URL}${URL_TRENDING}?${searchParams}`;
-
-    try {
-      const response = await axios.get(url);
-
-      this.setQuery('');
-      this.resetPage();
-      this.setLoadedHits(response.total_pages); // console.log(response.data);
       hiddenSpinner(true);
 
       lengthCheck(response.data.results.length);

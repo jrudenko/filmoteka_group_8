@@ -1,5 +1,6 @@
 import { refs } from '../refs/refs';
 import noPosterImage from '../../images/header/no-poster.jpeg';
+import genres from '../genres.json';
 
 let imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
 const noPosterImg = noPosterImage;
@@ -22,7 +23,7 @@ export function renderMovieListMarkup(movies) {
 }
 
 function moviesListTemplate({ poster_path, title, genre_ids, vote_average, release_date, id }) {
-  
+  const genresText = parseGenres(genre_ids)
   return `
         <li class="movie__item">
           <a hres="#" class="movie__link">
@@ -37,11 +38,31 @@ function moviesListTemplate({ poster_path, title, genre_ids, vote_average, relea
             <div class="movie__descr">
               <p class="movie__title">${title}</p>
               <div class="movie__descr--orange">
-                <p class="movie__genre">${genre_ids[0]}|${release_date.substr(0, 4)}</p>
+                <p class="movie__genre">${genresText}|${release_date.substr(0, 4)}</p>
                 <p class="movie__vote">${vote_average.toFixed(1)}</p>
               </div>
             </div>
           </a>
         </li>
   `;
+}
+
+function parseGenres(genresArray) {
+  let genresNames = [];
+
+  for (let genre of genresArray) {
+    const genreOfMovie = genres.find(movie => movie.id === genre);
+    genresNames.push(' ' + genreOfMovie.name);
+  }
+
+  if (genresNames.length > 3) {
+    genresNames = genresNames.slice(0, 2);
+    genresNames.splice(2, 0, ' Other');
+  }
+
+  if (genresNames.length === 0) {
+    genresNames = 'No genres';
+  }
+
+  return genresNames;
 }
