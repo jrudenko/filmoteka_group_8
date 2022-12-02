@@ -229,12 +229,13 @@
 
       color: #ffffff;
       background-color: transparent;
+      transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
       &:focus-visible,
       &:focus,
       &:hover {
         outline: transparent;
         border: none;
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid #ff6b01;
       }
     }
     &__button {
