@@ -142,7 +142,8 @@
     &-list {
       position: absolute;
 
-      top: 468px;
+      // top: 468px;
+      top: 498px;
 
       margin: 0;
       padding: 0;
@@ -150,12 +151,14 @@
       list-style-type: none;
 
       @media screen and (min-width: 768px) {
-        top: 80px;
+        // top: 80px;
+        top: 110px;
         left: 368px;
       }
 
       @media screen and (min-width: 1280px) {
-        top: 91px;
+        // top: 91px;
+        top: 121px;
         left: 403px;
       }
     }
@@ -215,7 +218,8 @@
   &__about {
     position: absolute;
 
-    top: 576px;
+    // top: 576px;
+    top: 626px;
     padding-right: 20px;
     font-family: 'Roboto';
     font-style: normal;
@@ -226,7 +230,8 @@
     color: #000000;
 
     @media screen and (min-width: 768px) {
-      top: 188px;
+      // top: 188px;
+      top: 228px;
       left: 368px;
 
       padding-right: 0px;
@@ -235,7 +240,8 @@
     }
 
     @media screen and (min-width: 1280px) {
-      top: 200px;
+      // top: 200px;
+      top: 240px;
       left: 403px;
 
       padding-right: 0px;
