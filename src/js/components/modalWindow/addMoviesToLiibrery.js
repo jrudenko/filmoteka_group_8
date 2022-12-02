@@ -1,3 +1,4 @@
+// add films to localstorage
 const moviesWatched = [];
 const movieQueue = [];
 
