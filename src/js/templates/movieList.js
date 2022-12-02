@@ -30,7 +30,7 @@ function moviesListTemplate({
   release_date,
   id,
 }) {
-  const genresText = parseGenres(genre_ids)
+  const genresText = parseGenres(genre_ids);
   return `
         <li class="movie__item">
           <a hres="#" class="movie__link">
@@ -46,7 +46,10 @@ function moviesListTemplate({
             <div class="movie__descr">
             <ul class="movie__descr--orange>
              <li class="card__genre movie__genre"></li>
-             <li class="movie__genre">${genresText} | ${release_date.substr(0, 4)}</li>
+             <li class="movie__genre">${genresText} | ${release_date.substr(
+    0,
+    4
+  )}</li>
              <li class="movie__vote">${vote_average.toFixed(1)}</li>
             </ul>
             </div>

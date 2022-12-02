@@ -28,6 +28,7 @@ function movieCardTemplate({
   overview,
   poster_path,
   genres,
+  id,
 }) {
   let genreses = '';
   genres.forEach(element => {
@@ -45,7 +46,7 @@ function movieCardTemplate({
     </button>
 
     <div class="singleMovieModal__flex-container">
-      <img class="singleMovieModal__picture" src=${imgBaseUrl}${poster_path} alt="${title}" />
+      <img class="singleMovieModal__picture js-image" src=${imgBaseUrl}${poster_path} alt="${title}" data-action="${id}" />
 
       <div class="singleMovieModal__description-container">
         <h2 class="singleMovieModal__title">${title}</h2>
@@ -74,13 +75,19 @@ function movieCardTemplate({
         </p>
         <ul class="singleMovieModal-add__list">
           <li class="singleMovieModal-add__item">
-            <button class="singleMovieModal-add__button" type="button">
-              add to Watched
+            <button class="singleMovieModal-add__button js-addWatched" type="button">
+              Add to Watched
+            </button>
+            <button class="singleMovieModal-add__button js-deleteWatched hide" type="button">
+              Delate Watched
             </button>
           </li>
           <li class="singleMovieModal-add__item">
-            <button class="singleMovieModal-add__button" type="button">
-              add to queue
+            <button class="singleMovieModal-add__button js-addQueue" type="button">
+              Add to queue
+            </button>
+            <button class="singleMovieModal-add__button js-deleteQueue hide" type="button">
+              Delate queue
             </button>
           </li>
           <li class="singleMovieModal-add__item">

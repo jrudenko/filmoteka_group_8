@@ -347,3 +347,11 @@
   color: var(--white-text-color);
   background-color: var(--btn-bcg);
 }
+
+button.hide {
+  display: none;
+}
+
+button.show {
+  display: block;
+}
