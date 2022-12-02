@@ -7,6 +7,7 @@ import Pagination from 'tui-pagination';
 import {
   closeButtonListener,
   clickBackdropListener,
+  clickTrellerButton,
 } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
 
 import { theme } from './js/components/theme/theme';
@@ -52,7 +53,7 @@ async function renderMovieList(data) {
     });
   })();
 }
-
+let idsTreller = [];
 document.querySelector('.gallery').addEventListener('click', e => {
   onClickPicture.onClickPicture;
   fetchApiMovies.fullFetch(e.target.id).then(x => {
@@ -62,6 +63,12 @@ document.querySelector('.gallery').addEventListener('click', e => {
     closeButtonListener();
     clickBackdropListener();
     addtListenersToModal();
+    clickTrellerButton();
+
+    fetchApiMovies.fullFetchVideo(e.target.id).then(ids => {
+      idsTreller = ids;
+      // console.log(ids);
+    });
 
     // document
     //   .querySelector('.btn-watch')
@@ -70,6 +77,10 @@ document.querySelector('.gallery').addEventListener('click', e => {
     //   );
   });
 });
+
+export function listTrailer() {
+  console.log(idsTreller);
+}
 
 // hiddenButton();
 renderMovieList(data);
