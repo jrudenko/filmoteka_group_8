@@ -1,7 +1,11 @@
 .library-image {
   margin: 0 auto 0 auto;
   padding: 0;
+  @media screen and (min-width: 768px) {
+    max-height: 400px;
+  }
   &__container {
+    padding: 15px;
     width: 100%;
     &.is-hidden {
       display: none;

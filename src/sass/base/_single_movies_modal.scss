@@ -254,7 +254,13 @@
     &__list {
       position: absolute;
 
-      top: 856px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      top: 750px;
+
+      width: 240px;
 
       margin: 0;
       padding: 0;
@@ -263,16 +269,18 @@
       list-style-type: none;
 
       @media screen and (min-width: 768px) {
-        margin: 0 0 0 -130px;
-        top: 468px;
-        left: 368px;
+        margin: 0 0 0 0;
+        top: 330px;
+        left: 360px;
+        width: 300px;
       }
 
       @media screen and (min-width: 1280px) {
         margin: 0;
         margin-left: -10px;
+        width: 330px;
         top: 403px;
-        left: 411px;
+        left: 430px;
       }
     }
 
@@ -281,15 +289,15 @@
       padding: 0;
 
       &:not(:last-child) {
-        margin-right: 15px;
+        margin-bottom: 10px;
       }
     }
 
     &__button,
     &__trailer {
       cursor: pointer;
-      width: 70px;
-      height: 55px;
+      width: 100px;
+      height: 50px;
 
       border-radius: 5px;
 
