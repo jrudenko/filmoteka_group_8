@@ -4,6 +4,10 @@ import { renderMovieCard } from './js/templates/movieCard';
 import * as onClickPicture from './js/components/modalWindow/modalWindow';
 import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
+import {
+  closeButtonListener,
+  clickBackdropListener,
+} from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
 
 import { theme } from './js/components/theme/theme';
 
@@ -54,6 +58,9 @@ document.querySelector('.gallery').addEventListener('click', e => {
   fetchApiMovies.fullFetch(e.target.id).then(x => {
     // console.log(x);
     renderMovieCard(x);
+
+    closeButtonListener();
+    clickBackdropListener();
 
     // document
     //   .querySelector('.btn-watch')
