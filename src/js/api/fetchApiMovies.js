@@ -120,7 +120,7 @@ export class FetchApiMovies {
       // console.log(response.data);
       response.data.results.forEach(element => {
         if (element.type === 'Trailer') {
-          ids[i] = element.id;
+          ids[i] = element.key;
           i += 1;
         }
       });

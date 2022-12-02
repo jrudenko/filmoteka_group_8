@@ -9,6 +9,7 @@ import {
   clickBackdropListener,
   clickTrellerButton,
 } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
+import { appendMarkupTrailer } from './js/components/modalWindow/trailer';
 
 import { theme } from './js/components/theme/theme';
 
@@ -79,7 +80,8 @@ document.querySelector('.gallery').addEventListener('click', e => {
 });
 
 export function listTrailer() {
-  console.log(idsTreller);
+  // console.log(idsTreller);
+  appendMarkupTrailer(idsTreller[0]);
 }
 
 // hiddenButton();

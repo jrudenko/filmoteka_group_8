@@ -1,5 +1,5 @@
 import { refs } from '../../refs/refs';
-import {listTrailer} from '../../../index'
+import { listTrailer } from '../../../index';
 
 function onEscKeyPress(event) {
   const ESC_KEY_CODE = 'Escape';
@@ -36,10 +36,13 @@ export function clickBackdropListener() {
 }
 
 export function clickTrellerButton() {
-  const trailerButton = document.querySelector('.singleMovieModal-add__trailer')
+  const trailerButton = document.querySelector(
+    '.singleMovieModal-add__trailer'
+  );
   trailerButton.addEventListener('click', () => {
     listTrailer();
-  })
+    onCloseModal();
+  });
 }
 
 function onBackdropClick(event) {
