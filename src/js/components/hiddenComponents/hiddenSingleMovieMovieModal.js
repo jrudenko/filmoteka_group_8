@@ -1,4 +1,5 @@
 import { refs } from '../../refs/refs';
+import {listTrailer} from '../../../index'
 
 function onEscKeyPress(event) {
   const ESC_KEY_CODE = 'Escape';
@@ -32,6 +33,13 @@ export function closeButtonListener() {
 }
 export function clickBackdropListener() {
   refs.moviesBackdrop.addEventListener('click', onBackdropClick);
+}
+
+export function clickTrellerButton() {
+  const trailerButton = document.querySelector('.singleMovieModal-add__trailer')
+  trailerButton.addEventListener('click', () => {
+    listTrailer();
+  })
 }
 
 function onBackdropClick(event) {
