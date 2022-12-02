@@ -5,13 +5,13 @@ import '@fortawesome/fontawesome-free/js/solid';
 
 const refs = {
   footer: document.querySelector('.footer'),
-    
+
   openModalBtnFoot: document.querySelector('[data-action="open-modal"]'),
   closeModalBtnFoot: document.querySelector('[data-action="close-modal"]'),
   backdropTeamFoot: document.querySelector('.js-backdrop'),
 
   team: document.querySelector('.dev-set'),
-}
+};
 
 const developersBoard = document.querySelector('.js-dev-set');
 developersBoard.innerHTML = personalCard(developers);
@@ -22,7 +22,7 @@ refs.closeModalBtnFoot.addEventListener('click', onCloseModal);
 
 function personalCard(developers) {
   const markup = developers
-    .map(({ img, name, position, instagram, github, linkedin, facebook  }) => {
+    .map(({ img, name, position, instagram, github, linkedin, facebook }) => {
       return `
         <li class='devcont-item'>
   <a href="#" class='devcont-link'>
@@ -67,24 +67,22 @@ function personalCard(developers) {
     </div>
   </a>
 </li>
-        `
+        `;
     })
-    .join('')
-  return markup
-};
+    .join('');
+  return markup;
+}
 
 function onOpenModal() {
   window.addEventListener('keydown', onEscKeyPress);
   refs.backdropTeamFoot.classList.remove('is-hidden');
   refs.backdropTeamFoot.classList.remove('show-modal');
-  
 }
 
 function onCloseModal() {
   window.removeEventListener('keydown', onEscKeyPress);
   refs.backdropTeamFoot.classList.remove('show-modal');
   refs.backdropTeamFoot.classList.add('is-hidden');
-  
 }
 
 function onBackdropClick(event) {
@@ -101,5 +99,3 @@ function onEscKeyPress(event) {
     onCloseModal();
   }
 }
-
-
