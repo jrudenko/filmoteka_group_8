@@ -19,4 +19,5 @@ export const refs = {
   //   '.singleMovieModal__button-close'
   // ),
   singleMovieModal: document.querySelector('#modalSingleMovie'),
+  moviesBackdrop: document.querySelector('.js-backdrop-movies'),
 };
