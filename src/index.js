@@ -19,7 +19,7 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 import './js/templates/developersModal';
 import './js/templates/scroll';
 import './js/templates/localStorage';
-
+import { addtListenersToModal } from './js/components/modalWindow/addMoviesToLiibrery';
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
 let currentPage = 1;
@@ -61,6 +61,7 @@ document.querySelector('.gallery').addEventListener('click', e => {
 
     closeButtonListener();
     clickBackdropListener();
+    addtListenersToModal();
 
     // document
     //   .querySelector('.btn-watch')

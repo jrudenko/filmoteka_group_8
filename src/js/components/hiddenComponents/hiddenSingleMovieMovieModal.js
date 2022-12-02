@@ -37,4 +37,5 @@ export function clickBackdropListener() {
 function onBackdropClick(event) {
   if (event.currentTarget === event.target) {
     onCloseModal();
+  }
 }
