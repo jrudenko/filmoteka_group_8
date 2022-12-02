@@ -13,6 +13,7 @@
   &__button-close {
     display: flex;
     position: fixed;
+    z-index: 1000000000000;
 
     align-items: center;
     justify-content: center;
@@ -21,7 +22,7 @@
     margin: 0;
 
     left: 50%;
-    transform: translateX(320px);
+    transform: translate(313px, 44px);
 
     width: 24px;
     height: 24px;
