@@ -14,7 +14,7 @@ export function renderMovieCard(movie) {
   //   imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
   // }
 
-  movieModal = movieCardTemplate(movie);
+  const movieModal = movieCardTemplate(movie);
 
   refs.divBackdrop.insertAdjacentHTML('beforeend', movieModal);
 }
