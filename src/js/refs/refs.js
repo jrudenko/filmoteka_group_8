@@ -18,6 +18,7 @@ export const refs = {
   // closeSingleMovieModalButton: document.querySelector(
   //   '.singleMovieModal__button-close'
   // ),
+  treilerButtonClose: document.querySelector('.treiler__button-close'),
   treilerContainer: document.querySelector('.treiler__container'),
   singleMovieModal: document.querySelector('#modalSingleMovie'),
   moviesBackdrop: document.querySelector('.js-backdrop-movies'),
