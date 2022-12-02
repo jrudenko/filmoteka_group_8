@@ -109,6 +109,30 @@ export class FetchApiMovies {
     }
   }
 
+  async fullFetchVideo(id) {
+    const url = `${BASE_URL}${URL_ID}/${id}/videos?${searchParams}`;
+
+    try {
+      const response = await axios.get(url);
+      let ids = [];
+      let i = 0;
+
+      // console.log(response.data);
+      response.data.results.forEach(element => {
+        if (element.type === 'Trailer') {
+          ids[i] = element.id;
+          i += 1;
+        }
+      });
+
+      // console.log(ids);
+
+      return ids;
+    } catch (error) {
+      return console.log(error);
+    }
+  }
+
   incrementPage(nextPage) {
     this.page = nextPage;
   }
