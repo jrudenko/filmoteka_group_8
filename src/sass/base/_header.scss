@@ -357,3 +357,29 @@
     }
   }
 }
+
+.rotate-logo {
+  position: relative;
+  -webkit-animation: logo-rot 3s infinite;
+  animation: logo-rot 5s infinite;
+}
+
+@keyframes logo-rot {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes logo-rot {
+  0% {
+    -webkit-transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
