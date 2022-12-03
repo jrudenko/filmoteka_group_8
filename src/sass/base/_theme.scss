@@ -12,7 +12,13 @@ html.dark,
 }
 
 .theme {
-  margin-right: 20px;
+  // margin-right: 20px;
+  position: fixed;
+    cursor: pointer;
+    top: 170px;
+    // left: 10px;
+    right: 50px;
+    // transform: translateY(-100%);
 }
 .material-icons {
   color: white;
