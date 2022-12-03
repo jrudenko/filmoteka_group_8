@@ -20,6 +20,8 @@ function onEscKeyPress(event) {
 }
 
 function onCloseButtonPress() {
+  const body = document.body
+    body.style.overflowY = ''
   onCloseVideo();
 }
 

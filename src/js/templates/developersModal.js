@@ -77,12 +77,16 @@ function onOpenModal() {
   window.addEventListener('keydown', onEscKeyPress);
   refs.backdropTeamFoot.classList.remove('is-hidden');
   refs.backdropTeamFoot.classList.remove('show-modal');
+  const body = document.body
+    body.style.overflowY = 'hidden'
 }
 
 function onCloseModal() {
   window.removeEventListener('keydown', onEscKeyPress);
   refs.backdropTeamFoot.classList.remove('show-modal');
   refs.backdropTeamFoot.classList.add('is-hidden');
+  const body = document.body
+    body.style.overflowY = ''
 }
 
 function onBackdropClick(event) {
