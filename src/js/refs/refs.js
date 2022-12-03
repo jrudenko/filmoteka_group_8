@@ -22,4 +22,5 @@ export const refs = {
   treilerContainer: document.querySelector('.treiler__container'),
   singleMovieModal: document.querySelector('#modalSingleMovie'),
   moviesBackdrop: document.querySelector('.js-backdrop-movies'),
+  gallery: document.querySelector('.gallery filmoteka_list'),
 };
