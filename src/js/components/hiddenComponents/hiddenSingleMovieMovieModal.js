@@ -44,7 +44,8 @@ export function clickTrellerButton() {
   );
   trailerButton.addEventListener('click', () => {
     listTrailer();
-    onCloseModal();
+      window.removeEventListener('keydown', onEscKeyPress);
+  refs.singleMovieModal.classList.add('is-hidden');
   });
 }
 
