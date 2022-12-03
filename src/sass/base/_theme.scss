@@ -12,13 +12,15 @@ html.dark,
 }
 
 .theme {
-  // margin-right: 20px;
   position: fixed;
-    cursor: pointer;
-    top: 170px;
-    // left: 10px;
-    right: 50px;
-    // transform: translateY(-100%);
+  top: 200px;
+  right: 10px;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+      top: 170px;
+      right: 50px;
+  }
 }
 .material-icons {
   color: white;
