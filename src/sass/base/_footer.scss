@@ -1,5 +1,6 @@
 .footer {
     background-color: #F7F7F7;
+    padding-bottom: 0;
 }
 
 .footer__image {
@@ -9,8 +10,8 @@
 }
 
 .footer__container {
-            padding-left: 71px;
-        padding-right: 71px;
+    padding-left: 71px;
+    padding-right: 71px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 0;
@@ -36,6 +37,10 @@
     }
 }
 
+
+.dark .footer {
+   background-color: #151414;
+}
 @media screen and (min-width: 320px) {
     .copyright {
         margin: 0px;
@@ -100,8 +105,8 @@
 
 .btn-on-top {
     position: fixed;
-    bottom: 3vh;
-    right: 1vw;
+    bottom: 16vh;
+    right: 4vw;
     z-index: 1000;
     width: 50px;
     height: 50px;
@@ -109,24 +114,33 @@
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    border: 2px solid #ff6b08;
+    border: 4px solid #ff6b08;
     // background-color: #ff6b08;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     // color: white;
     color: #ff6b08;
+    font-weight: 100px;
+    
+    
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
-            width: 25px;
-                height: 25px;
+            width: 30px;
+            height: 30px;
+            bottom: 19vh;
+            right: 4vw;
+            border: 2px solid #ff6b08;
+         
+                
         }
 
 
-        @media screen and (min-width: 768px) and (max-width: 1079px) {
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 35px;
-            height: 35px;
+        height: 35px;
+        border: 3px solid #ff6b08;
 
     }
 }
@@ -143,6 +157,35 @@
     transition: all 0.5s;
 }
 
+.material-symbols-outlined {
+    font-size: 34px;
+    font-weight: 900;
+    // color: #ff6b08;
+
+    @media screen and (min-width: 320px) and (max-width: 767px){
+
+        font-size: 16px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        font-size: 22px;
+
+    }
+
+
+}
+
+.dark .material-symbols-outlined {
+    color: #ff6b08;
+}
+
+
+.dark .btn-load-more:hover,
+.dark .btn-on-top:hover {
+    background-color: #463930;
+    // color: white;
+    transition: all 0.5s;
+}
 
 
 
