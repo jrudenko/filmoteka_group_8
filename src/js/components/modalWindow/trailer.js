@@ -4,6 +4,10 @@ function onCloseVideo() {
   refs.treilerContainer.innerHTML = '';
 
   window.removeEventListener('keydown', onEscKeyPress);
+ 
+  const body = document.body
+  body.style.overflowY = ''
+
   window.removeEventListener('click', screenBlock);
 
   refs.treilerButtonClose.removeEventListener('click', onCloseButtonPress);
@@ -21,8 +25,6 @@ function onEscKeyPress(event) {
 }
 
 function onCloseButtonPress() {
-  const body = document.body;
-  body.style.overflowY = '';
   onCloseVideo();
 }
 
