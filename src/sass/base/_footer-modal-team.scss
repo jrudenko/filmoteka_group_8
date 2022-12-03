@@ -118,6 +118,13 @@
 
 
 
+.dark .icon-close-modal-stud {
+     border-radius: 50%;
+     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgb(255, 108, 11) 0px 1px 3px 1px;
+}
+
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     .modal-team {
@@ -228,6 +235,7 @@
 .social-network-item {
     &:hover {
         transform: scale(1.75);
+        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.3);
     }
 }
 
@@ -235,17 +243,22 @@
     margin-bottom: 10px;
 }
 
+.social-network-link .fa-github:hover {
+    color: #333;
+    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
+}
 
+.dark .social-network-link .fa-github:hover {
+    color: rgb(152, 77, 27);
+    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
+}
 
 .social-network-link .fa-instagram:hover {
     color: #e4405f;
     transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
 }
 
-.social-network-link .fa-github:hover {
-    color: #333;
-    transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
-}
+
 
 .social-network-link .fa-linkedin:hover {
     color: #0e76a8;
@@ -256,6 +269,8 @@
     color: #0e76a8;
     transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
 }
+
+
 
 
 .social-network-box {
