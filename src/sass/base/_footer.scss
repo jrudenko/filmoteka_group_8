@@ -102,7 +102,6 @@
 
 // Кнопка скролу вверх
 
-
 .btn-on-top {
     position: fixed;
     bottom: 16vh;
@@ -120,8 +119,6 @@
     // color: white;
     color: #ff6b08;
     font-weight: 100px;
-    
-    
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
@@ -132,12 +129,10 @@
             bottom: 19vh;
             right: 4vw;
             border: 2px solid #ff6b08;
-         
-                
+             
         }
 
-
-        @media screen and (min-width: 768px) and (max-width: 1279px) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
         width: 35px;
         height: 35px;
         border: 3px solid #ff6b08;
@@ -163,15 +158,12 @@
     // color: #ff6b08;
 
     @media screen and (min-width: 320px) and (max-width: 767px){
-
         font-size: 16px;
     }
 
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         font-size: 22px;
-
     }
-
 
 }
 
@@ -179,20 +171,17 @@
     color: #ff6b08;
 }
 
-
 .dark .btn-load-more:hover,
 .dark .btn-on-top:hover {
     background-color: #463930;
-    // color: white;
     transition: all 0.5s;
 }
 
 
 
+
+
 // Пульсація серця
-
-
-
 
 .pulse-heart {
     position: relative;
@@ -204,7 +193,6 @@
 @keyframes heart-beats {
     0% {
         transform: scale(1);
-        // background-color: black;
     }
 
     7% {
