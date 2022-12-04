@@ -21,6 +21,7 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 import './js/templates/developersModal';
 import './js/templates/scroll';
 import './js/templates/localStorage';
+
 import { addtListenersToModal } from './js/components/modalWindow/addMoviesToLiibrery';
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
@@ -37,8 +38,10 @@ async function renderMovieList(data) {
   (function () {
     const container = document.getElementById('tui-pagination-container');
 
-    container.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    
+    container.addEventListener('click', () =>
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    );
+
     // console.log(movies);
     const instance = new Pagination(container, {
       page: currentPage,
