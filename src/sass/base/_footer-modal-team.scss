@@ -70,13 +70,9 @@
     height: 140px;
     transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     
-
     &:hover {
         transform: scale(1.1);
-
         box-shadow: #ff6b08 0px 2px 9px, rgb(255, 108, 11) 0px 0px 0px 3px;
-
-        
     }
 }
 
@@ -116,15 +112,10 @@
  
 }
 
-
-
 .dark .icon-close-modal-stud {
      border-radius: 50%;
      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgb(255, 108, 11) 0px 1px 3px 1px;
 }
-
-
-
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     .modal-team {
@@ -132,9 +123,10 @@
             display: inline-block;
             align-items: center;
             justify-content: center;
-            margin-left: 20px;
-            margin-right: 20px;
-            width: 450px;
+            margin-left: 10px;
+            margin-right: 10px;
+            // width: 450px;
+            width: 680px;
             // height: 580px;
             max-height: 100vh;
             position: relative;
@@ -152,7 +144,14 @@
         font-weight: 700;
     }
 
-  
+    .devcont-img {
+    
+            border-radius: 25%;
+            margin-bottom: 10px;
+            width: 120px;
+            height: 120px;
+        }
+          
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
@@ -219,6 +218,7 @@
       
 
 }
+// Стилизация соц.сетей в модалке команды
 
 .dev-set {
     align-items: center;
@@ -270,9 +270,6 @@
     transition: 0.5s cubic-bezier(0.95, 0.32, 0.37, 1.3);
 }
 
-
-
-
 .social-network-box {
     align-items: center;
 }
@@ -312,7 +309,38 @@
 
 
 
+// Стилизация полосы прокрутки
 
+.dark .modal-team::-webkit-scrollbar {
+    width: 12px;
+    /* ширина всей полосы прокрутки */
+}
+
+.dark .modal-team::-webkit-scrollbar-track {
+    background:rgb(31, 31, 31);
+    /* цвет зоны отслеживания */
+}
+
+.dark .modal-team::-webkit-scrollbar-thumb {
+    background-color: rgb(56, 17, 17);
+    /* цвет бегунка */
+    border-radius: 20px;
+    /* округлось бегунка */
+   
+}
+
+
+.modal-team::-webkit-scrollbar {
+    width: 12px;
+    /* ширина всей полосы прокрутки */
+}
+.modal-team::-webkit-scrollbar-thumb {
+    background-color: #ff6b08;
+    /* цвет бегунка */
+    border-radius: 20px;
+    /* округлось бегунка */
+
+}
 
 
 
