@@ -4,6 +4,7 @@ import { renderMovieCard } from './js/templates/movieCard';
 import * as onClickPicture from './js/components/modalWindow/modalWindow';
 import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
+import './js/templates/firebase-registration';
 import {
   closeButtonListener,
   clickBackdropListener,
@@ -21,9 +22,6 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 import './js/templates/developersModal';
 import './js/templates/scroll';
 import './js/templates/localStorage';
-import './js/templates/firebase-registration';
-
-
 import { addtListenersToModal } from './js/components/modalWindow/addMoviesToLiibrery';
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
