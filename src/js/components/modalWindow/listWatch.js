@@ -53,7 +53,7 @@ class PaintLibrery {
   };
 
   paintQueueCards = response => {
-    refs.queueList.innerHTML = response;
+    refs.queueList.innerHTML = cardTpl(response);
   };
 
   initListeners = () => {
