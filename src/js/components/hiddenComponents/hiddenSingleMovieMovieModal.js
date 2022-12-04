@@ -12,7 +12,7 @@ function onEscKeyPress(event) {
 
 function onCloseModal() {
   window.removeEventListener('keydown', onEscKeyPress);
-  refs.singleMovieModal.classList.add('is-hidden'); 
+  refs.singleMovieModal.classList.add('is-hidden');
   const body = document.body;
   body.style.overflowY = '';
 }
@@ -20,10 +20,8 @@ function onCloseModal() {
 export function visibleSingleMovieModal(bool) {
   if (bool) {
     refs.singleMovieModal.classList.remove('is-hidden');
-    
-    const body = document.body;
-    body.style.overflowY = 'hidden';
-
+const body = document.body;
+  body.style.overflowY = 'hidden';
     window.addEventListener('keydown', onEscKeyPress);
   } else if (!bool) {
     onCloseModal();
@@ -46,8 +44,8 @@ export function clickTrellerButton() {
   );
   trailerButton.addEventListener('click', () => {
     listTrailer();
-    window.removeEventListener('keydown', onEscKeyPress);
-  refs.singleMovieModal.classList.add('is-hidden'); 
+      window.removeEventListener('keydown', onEscKeyPress);
+  refs.singleMovieModal.classList.add('is-hidden');
   });
 }
 

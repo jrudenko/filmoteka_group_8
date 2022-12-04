@@ -27,24 +27,18 @@
 
   <body>
     <include src="./partials/header_page1_my_library.html"></include>
-    <div class="library-image__container js-libCont">
-      <h2 class="librery-title js-titleLib">Select a category to view</h2>
+
+    <div class="library-image__container">
       <img
-        class="library-image js-imgLib"
+        class="library-image"
         src="./images/header/nothing_here.jpg"
         alt="theres nothing here"
       />
     </div>
-    <main>
-      <div>
-        <section class="main">
-          <ul class="gallery filmoteka_list js-watchList"></ul>
-          <ul class="gallery filmoteka_list js-queueList is-hidden"></ul>
-        </section>
-      </div>
-    </main>
+
     <include src="./partials/footer.html"></include>
     <include src="./partials/footer-modal-team.html"></include>
+    
 
     <script type="module" src="./library.js"></script>
   </body>

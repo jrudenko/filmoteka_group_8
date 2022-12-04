@@ -1,6 +1,6 @@
 // add films to localstorage
 const moviesWatched = [];
-const moviesQueue = [];
+const movieQueue = [];
 
 export function addtListenersToModal() {
   const modalAddWatched = document.querySelector('.js-addWatched');
@@ -20,7 +20,7 @@ export function addtListenersToModal() {
     hideBtn(modalAddWatched, modalDeleteWatched);
   }
 
-  if (moviesQueue.includes(idElem)) {
+  if (movieQueue.includes(idElem)) {
     hideBtn(modalAddQueue, modalDeleteQueue);
   }
 
@@ -46,18 +46,18 @@ export function addtListenersToModal() {
   }
 
   function onClickToAddQueueMovie() {
-    if (moviesQueue.includes(idElem)) return;
+    if (movieQueue.includes(idElem)) return;
     hideBtn(modalAddQueue, modalDeleteQueue);
 
-    moviesQueue.push(idElem);
-    localStorage.setItem('moviesQueue', JSON.stringify(moviesQueue));
+    movieQueue.push(idElem);
+    localStorage.setItem('movieQueue', JSON.stringify(movieQueue));
   }
 
   function onClickToDeleteQueueMovie() {
     hideBtn(modalDeleteQueue, modalAddQueue);
 
-    moviesQueue.splice(moviesQueue.indexOf(idElem), 1);
-    localStorage.removeItem('moviesQueue');
-    localStorage.setItem('moviesQueue', JSON.stringify(moviesQueue));
+    movieQueue.splice(movieQueue.indexOf(idElem), 1);
+    localStorage.removeItem('movieQueue');
+    localStorage.setItem('movieQueue', JSON.stringify(movieQueue));
   }
 }

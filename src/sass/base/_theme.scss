@@ -10,15 +10,9 @@ html.dark,
 .dark a {
   color: #fff;
 }
-// .theme-switch {
-//     position: absolute;
-//     right: 1%;
-//     top: 7%;
-//     display: flex;
-//     align-items: center;
-// }
+
 .theme {
-  position: absolute;
+  position: fixed;
   top: 200px;
   right: 10px;
   cursor: pointer;
