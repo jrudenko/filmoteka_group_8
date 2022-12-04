@@ -21,6 +21,9 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 import './js/templates/developersModal';
 import './js/templates/scroll';
 import './js/templates/localStorage';
+import './js/templates/firebase-registration';
+
+
 import { addtListenersToModal } from './js/components/modalWindow/addMoviesToLiibrery';
 const fetchApiMovies = new FetchApiMovies();
 const data = fetchApiMovies.fetchTrending();
