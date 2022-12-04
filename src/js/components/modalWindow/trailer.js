@@ -4,6 +4,11 @@ function onCloseVideo() {
   refs.treilerContainer.innerHTML = '';
 
   window.removeEventListener('keydown', onEscKeyPress);
+ 
+  const body = document.body
+  body.style.overflowY = ''
+
+  window.removeEventListener('click', screenBlock);
 
   refs.treilerButtonClose.removeEventListener('click', onCloseButtonPress);
   refs.treilerButtonClose.classList.add('is-hidden');
@@ -32,4 +37,12 @@ export function appendMarkupTrailer(key) {
   refs.treilerContainer.innerHTML = `
   <iframe class="trailer__iframe" width="700" height="500" src="https://www.youtube.com/embed/${key}" title="YouTube video player" frameborder="1" allow="accelerometer;  controls="1"; clipboard-write; encrypted-media; gyroscope="1"; picture-in-picture"; allowfullscreen="1"; enablejsapi="1"></iframe>
   `;
+
+  window.addEventListener('click', screenBlock);
+}
+
+function screenBlock(evt) {
+  if (appendMarkupTrailer) {
+    refs.singleMovieModal.classList.add('is-hidden');
+  }
 }
