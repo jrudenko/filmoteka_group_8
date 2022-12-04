@@ -24,6 +24,7 @@
     "axios": "^1.2.0",
     "firebase": "^9.14.0",
     "modern-normalize": "^1.1.0",
+    "parcel-transformer-hbs": "^1.0.4",
     "pnotify": "^5.2.0",
     "tui-pagination": "^3.4.1"
   },
