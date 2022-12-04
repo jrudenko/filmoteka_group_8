@@ -9,6 +9,7 @@ import {
   clickBackdropListener,
   clickTrellerButton,
 } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
+import './js/templates/firebase-registration';
 import { appendMarkupTrailer } from './js/components/modalWindow/trailer';
 
 import { theme } from './js/components/theme/theme';
