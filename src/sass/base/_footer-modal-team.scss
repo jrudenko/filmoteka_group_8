@@ -34,12 +34,14 @@
     background-color: #FFFFFF;
     padding-bottom: 13px;
     padding-top: 13px;
+   
     
 }
 
 .dark .modal-team {
     background: linear-gradient(180deg, rgb(56, 17, 17) 4%, rgb(47, 47, 47) 27%);
 }
+
 .developer-container {
     display: flex;
     flex-wrap: wrap;
@@ -52,22 +54,21 @@
     list-style: none;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     justify-content: space-between;
-    margin: 0 40px;
+    margin: 0 30px;
     display: inline-block;
     flex-wrap: wrap;
-    
     align-items: center;
 }
 
-.devcont-img {
-    
+.devcont-img {    
     border-radius: 25%;
     margin-bottom: 20px;
     margin-top: 20px;
     margin-left: 0;
     margin-right: 0;
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    height: 140px;
+    height: 160px;
+    width: 160px;
     transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     
     &:hover {
@@ -75,8 +76,6 @@
         box-shadow: #ff6b08 0px 2px 9px, rgb(255, 108, 11) 0px 0px 0px 3px;
     }
 }
-
-
 
 .devcont-description {
     display: inline-block;
@@ -88,7 +87,6 @@
 }
 
 .devcont-name {
-   
     margin-bottom: 10px;
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -116,25 +114,32 @@
 .dark .icon-close-modal-stud {
      border-radius: 50%;
      background-color:#ff6b08;
-   
-   
-     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,rgb(255, 108, 11) 0px 1px 3px 1px;
+     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    
+     &:hover,
+      :focus {
+        transform: scale(1.1);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgb(255, 108, 11) 0px 1px 3px 1px;
+        }
+     
 }
+
+
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
     .modal-team {
         flex-wrap: wrap;
-            display: inline-block;
-            align-items: center;
-            justify-content: center;
-            margin-left: 10px;
-            margin-right: 10px;
-            // width: 450px;
-            width: 680px;
-            // height: 580px;
-            max-height: 100vh;
-            position: relative;
-            margin: auto;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        // width: 450px;
+        width: 680px;
+        // height: 580px;
+        max-height: 100vh;
+        position: relative;
+        margin: auto;
     }
 
     .devcont-item {
@@ -149,12 +154,11 @@
     }
 
     .devcont-img {
-    
-            border-radius: 25%;
-            margin-bottom: 10px;
-            width: 120px;
-            height: 120px;
-        }
+       border-radius: 25%;
+       margin-bottom: 10px;
+       width: 135px;
+       height: 135px;
+    }
           
 }
 
@@ -184,7 +188,6 @@
     }
 
     .devcont-img {
-        
         border-radius: 25%;
         margin-bottom: 10px;
         width: 140px;
@@ -206,10 +209,8 @@
     .devcont-position {
         margin-bottom: 10px;
         font-size: 14px;
-        font-weight: 600;
-       
+        font-weight: 600; 
     }
-
 }
 
 
@@ -219,10 +220,9 @@
         font-size: 26px;
         font-weight: 700;
         color: #ff6b08;
-      
-
 }
-// Стилизация соц.сетей в модалке команды
+
+// Стилизація соц.мереж в модалці команди футера
 
 .dev-set {
     align-items: center;
@@ -313,37 +313,33 @@
 
 
 
-// Стилизация полосы прокрутки
+// Стилізація полоси прокрутки модалки
 
 .dark .modal-team::-webkit-scrollbar {
     width: 12px;
-    /* ширина всей полосы прокрутки */
+    
 }
 
 .dark .modal-team::-webkit-scrollbar-track {
     background:rgb(31, 31, 31);
-    /* цвет зоны отслеживания */
+   
 }
 
 .dark .modal-team::-webkit-scrollbar-thumb {
     background-color: rgb(56, 17, 17);
-    /* цвет бегунка */
     border-radius: 20px;
-    /* округлось бегунка */
    
 }
 
-
 .modal-team::-webkit-scrollbar {
     width: 12px;
-    /* ширина всей полосы прокрутки */
+ 
 }
+
 .modal-team::-webkit-scrollbar-thumb {
     background-color: #ff6b08;
-    /* цвет бегунка */
     border-radius: 20px;
-    /* округлось бегунка */
-
+    
 }
 
 
