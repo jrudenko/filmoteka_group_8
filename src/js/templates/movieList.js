@@ -45,7 +45,7 @@ function moviesListTemplate({
             <div class="movie__descr">
             <p class="movie__title">${title}</p>
             
-            <ul class="movie__descr--orange>
+            <ul class="movie__descr--orange">
              <li class="card__genre movie__genre"></li>
              <li class="movie__genre">${genresText} | ${release_date.substr(
     0,

@@ -1,0 +1,26 @@
+{{#each this}}
+  <li class='movie__item'>
+    <a hres='#' class='movie__link'>
+      <div class='thumb'>
+        <img
+          class='movie__img'
+          id={{id}}
+          width='500'
+          loading='lazy'
+          alt={{title}}
+          src='https://image.tmdb.org/t/p/w500/{{poster_path}}'
+        />
+      </div>
+      <div class='movie__descr'>
+        <p class='movie__title'>{{title}}</p>
+        <ul class='movie__descr--orange'>
+          <li class='card__genre movie__genre'></li>
+          <li class='movie__genre'>{{#each genres}}{{name}}{{/each}}
+            |
+            {{release_date}}</li>
+          <li class='movie__vote'>{{vote_average}}</li>
+        </ul>
+      </div>
+    </a>
+  </li>
+{{/each}}

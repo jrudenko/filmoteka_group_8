@@ -29,16 +29,20 @@
     <include src="./partials/header_page1_my_library.html"></include>
 
     <div class="library-image__container">
-      <img
-        class="library-image"
-        src="./images/header/nothing_here.jpg"
-        alt="theres nothing here"
-      />
+      <div class="main js-libCont">
+        <h2 class="librery-title js-titleLib">Select a category to view</h2>
+        <img
+          class="library-image js-imgLib"
+          src="./images/header/nothing_here.jpg"
+          alt="theres nothing here"
+        />
+      </div>
+      <ul class="gallery filmoteka_list js-watchList"></ul>
+      <ul class="gallery filmoteka_list js-queueList is-hidden"></ul>
     </div>
 
     <include src="./partials/footer.html"></include>
     <include src="./partials/footer-modal-team.html"></include>
-    
 
     <script type="module" src="./library.js"></script>
   </body>
