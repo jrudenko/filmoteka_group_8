@@ -20,7 +20,7 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 
 import './js/templates/developersModal';
 import './js/templates/scroll';
-import './js/templates/localStorage';
+// import './js/templates/localStorage';
 
 import { addtListenersToModal } from './js/components/modalWindow/addMoviesToLiibrery';
 const fetchApiMovies = new FetchApiMovies();
