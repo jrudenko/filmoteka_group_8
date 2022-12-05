@@ -13,9 +13,6 @@ import { appendMarkupTrailer } from './js/components/modalWindow/trailer';
 
 import { theme } from './js/components/theme/theme';
 
-// import { hiddenButton } from './js/components/hiddenComponents/hiddenFormButton';
-// import { refs } from './js/refs/refs';
-// import { movie__img } from './js/components/modalWindow/modalWindow';
 import { visibleSingleMovieModal } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
 import './js/templates/firebase-registration';
 import './js/templates/developersModal';
@@ -27,8 +24,6 @@ const data = fetchApiMovies.fetchWithPage(1);
 console.log(data);
 let currentPageNumber = 1;
 
-// visibleSingleMovieModal(true);
-
 async function renderMovieList(data) {
   const response = await data;
   console.log(response);
@@ -37,11 +32,14 @@ async function renderMovieList(data) {
   renderMovieListMarkup(movies);
 
   (function () {
-    const paginationContainer = document.getElementById('tui-pagination-container');
+    const paginationContainer = document.getElementById(
+      'tui-pagination-container'
+    );
 
-    paginationContainer.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    
-    // console.log(movies);
+    paginationContainer.addEventListener('click', () =>
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    );
+
     const paginator = new Pagination(paginationContainer, {
       page: currentPageNumber,
       totalItems: 400,
@@ -49,7 +47,7 @@ async function renderMovieList(data) {
       visiblePages: 5,
       usageStatistics: false,
     });
-    paginator.on('afterMove', async (event) => {
+    paginator.on('afterMove', async event => {
       currentPageNumber = event.page;
       let paginatedMovies = await fetchApiMovies.fetchWithPage(event.page);
 
@@ -65,7 +63,6 @@ let idsTreller = [];
 document.querySelector('.gallery').addEventListener('click', e => {
   onClickPicture.onClickPicture;
   fetchApiMovies.fullFetch(e.target.id).then(x => {
-    // console.log(x);
     renderMovieCard(x);
 
     closeButtonListener();
@@ -75,7 +72,6 @@ document.querySelector('.gallery').addEventListener('click', e => {
 
     fetchApiMovies.fullFetchVideo(e.target.id).then(ids => {
       idsTreller = ids;
-      // console.log(ids);
     });
 
     // document
