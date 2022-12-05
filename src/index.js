@@ -2,7 +2,7 @@ import { FetchApiMovies } from './js/api/fetchApiMovies';
 import { renderMovieListMarkup } from './js/templates/movieList';
 import { renderMovieCard } from './js/templates/movieCard';
 import * as onClickPicture from './js/components/modalWindow/modalWindow';
-import { onSubmitForm } from './js/components/inputSearch/searchByName';
+// import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
 import {
   closeButtonListener,
