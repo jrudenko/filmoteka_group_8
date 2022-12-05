@@ -16,27 +16,36 @@ Filmoteka: мобільна, планшетна та десктопна.
 
 - Team Lead: [https://github.com/jrudenko](https://github.com/jrudenko)
 
-- Scrum master: (https://github.com/Tisotti)
+- Scrum master: [https://github.com/Tisotti](https://github.com/Tisotti)
 
-- Front-end developer: (https://github.com/SeredaAndrey)
+- Front-end developer:
+  [https://github.com/SeredaAndre](https://github.com/SeredaAndrey)
 
-- Front-end developer: (https://github.com/DimaKrupenko)
+- Front-end
+  developer:[https://github.com/DimaKrupenko](https://github.com/DimaKrupenko)
 
-- Front-end developer: (https://github.com/sava12012)
+- Front-end developer:
+  [https://github.com/sava12012](https://github.com/sava12012)
 
-- Front-end developer: (https://github.com/oksanaglu)
+- Front-end developer:
+  [https://github.com/oksanaglu](https://github.com/oksanaglu)
 
-- Front-end developer: (https://github.com/DimaKIL)
+- Front-end developer: [https://github.com/DimaKIL](https://github.com/DimaKIL)
 
-- Front-end developer: (https://github.com/MsMirzakhanova)
+- Front-end developer:
+  [https://github.com/MsMirzakhanov](https://github.com/MsMirzakhanova)
 
-- Front-end developer: (https://github.com/Ronskyi-O)
+- Front-end developer:
+  [https://github.com/Ronskyi-O](https://github.com/Ronskyi-O)
 
-- Front-end developer: (https://github.com/Sviatoslav43)
+- Front-end developer:
+  [https://github.com/Sviatoslav43](https://github.com/Sviatoslav43)
 
-- Front-end developer: (https://github.com/AlexSol1702)
+- Front-end developer:
+  [https://github.com/AlexSol1702](https://github.com/AlexSol1702)
 
-- Front-end developer: (https://github.com/ArtemKolesnyk)
+- Front-end developer:
+  [https://github.com/ArtemKolesnyk](https://github.com/ArtemKolesnyk)
 
 **Також нам було надано ТЗ з описом функціоналу майбутнього сайту:**
 
