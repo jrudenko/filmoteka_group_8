@@ -2,7 +2,7 @@ import { FetchApiMovies } from './js/api/fetchApiMovies';
 import { renderMovieListMarkup } from './js/templates/movieList';
 import { renderMovieCard } from './js/templates/movieCard';
 import * as onClickPicture from './js/components/modalWindow/modalWindow';
-// import { onSubmitForm } from './js/components/inputSearch/searchByName';
+import { onSubmitForm } from './js/components/inputSearch/searchByName';
 import Pagination from 'tui-pagination';
 import {
   closeButtonListener,
@@ -20,39 +20,40 @@ import { visibleSingleMovieModal } from './js/components/hiddenComponents/hidden
 
 import './js/templates/developersModal';
 import './js/templates/scroll';
-// import './js/templates/localStorage';
-
+import './js/templates/localStorage';
 import { addtListenersToModal } from './js/components/modalWindow/addMoviesToLiibrery';
-const fetchApiMovies = new FetchApiMovies();
-const data = fetchApiMovies.fetchTrending();
-let currentPage = 1;
+const fetchApiMovies = new FetchApiMovies(21);
+const data = fetchApiMovies.fetchWithPage(1);
+console.log(data);
+let currentPageNumber = 1;
 
 // visibleSingleMovieModal(true);
 
 async function renderMovieList(data) {
   const response = await data;
+  console.log(response);
   const movies = await response.results;
 
   renderMovieListMarkup(movies);
 
   (function () {
-    const container = document.getElementById('tui-pagination-container');
+    const paginationContainer = document.getElementById('tui-pagination-container');
 
-    container.addEventListener('click', () =>
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    );
-
+    paginationContainer.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    
     // console.log(movies);
-    const instance = new Pagination(container, {
-      page: currentPage,
+    const paginator = new Pagination(paginationContainer, {
+      page: currentPageNumber,
       totalItems: 400,
       itemsPerPage: 20,
       visiblePages: 5,
       usageStatistics: false,
     });
-    instance.on('afterMove', data => {
-      currentPage = data.page;
-      fetchApiMovies.fetchWithPage(data.page).then(x => renderMovieList(x));
+    paginator.on('afterMove', async (event) => {
+      currentPageNumber = event.page;
+      let paginatedMovies = await fetchApiMovies.fetchWithPage(event.page);
+
+      renderMovieList(paginatedMovies);
 
       document.querySelector('.gallery').addEventListener('click', e => {
         console.log(e.target);
@@ -80,7 +81,7 @@ document.querySelector('.gallery').addEventListener('click', e => {
     // document
     //   .querySelector('.btn-watch')
     //   .addEventListener('click', () =>
-    //     localStorage.setItem(`${x.id}`, JSON.stringify(x))
+    //     localStorage.setItem(${x.id}, JSON.stringify(x))
     //   );
   });
 });
@@ -92,7 +93,6 @@ export function listTrailer() {
 
 // hiddenButton();
 renderMovieList(data);
-
 // import { FetchApiMovies } from './js/api/fetchApiMovies';
 // import { renderMovieListMarkup } from './js/templates/movieList';
 // import { renderMovieCard } from './js/templates/movieCard';
