@@ -17,32 +17,55 @@ const searchParams = new URLSearchParams({
 });
 
 export class FetchApiMovies {
-  constructor() {
+  constructor(moviesPerPage) {
     this.searchQuery = '';
     this.page = 1;
+    this.moviesPerPage = moviesPerPage;
     this.loadedHits = 0;
   }
   async fetchWithPage(pageNumber) {
-    hiddenSpinner(false);
-    const searchParams = new URLSearchParams({
-      api_key: API_KEY,
-      language: 'en-US',
-      page: pageNumber,
-      include_adult: false,
-    });
+    const tmdbFirstMovieID = this.moviesPerPage * (pageNumber-1);
+    let currentId = tmdbFirstMovieID;
 
-    const url = `${BASE_URL}${URL_TRENDING}?${searchParams}`;
-    console.log(url);
+    let tmdbPages = [];
+    while (currentId < pageNumber * this.moviesPerPage) {
+      tmdbPages.push(Math.trunc(currentId / 20) + 1);
+      currentId += 20;
+    }
+    
+    let pageRequestPromises = tmdbPages.map(tmdbPageNumber => {
+      const searchParams = new URLSearchParams({
+        api_key: API_KEY,
+        language: 'en-US',
+        page: tmdbPageNumber,
+        include_adult: false,
+      });
+      const url = `${BASE_URL}${URL_TRENDING}?${searchParams}`;
+      return axios.get(url);
+    })
+
+    hiddenSpinner(false);
     try {
-      const response = await axios.get(url);
+      const responses = await Promise.all(pageRequestPromises);
+
+      const response = responses.map(response => response.data).reduce((accumulatedResponse, response) => {
+        accumulatedResponse.results = accumulatedResponse.results.concat(response.results);
+        return accumulatedResponse;
+      })
+
+      response.results = response.results.slice(
+        tmdbFirstMovieID % 20, tmdbFirstMovieID % 20 + this.moviesPerPage
+      );
+      console.log(tmdbFirstMovieID % 20, tmdbFirstMovieID % 20 + this.moviesPerPage);
+
+      //const response = await axios.get(url);
       this.setQuery('');
       this.resetPage();
-      this.setLoadedHits(response.data.total_pages);
+      this.setLoadedHits(response.total_pages);
       hiddenSpinner(true);
 
-      lengthCheck(response.data.results.length);
-
-      return response.data;
+      lengthCheck(response.results.length);
+      return response;
     } catch (error) {
       hiddenSpinner(true);
       return console.log(error);
