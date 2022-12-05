@@ -14,7 +14,7 @@ Filmoteka: мобільна, планшетна та десктопна.
 
 **Розробники цього сайту:**
 
-- [team lead]: (https://github.com/jrudenko)
+- Team Lead: [https://github.com/jrudenko](https://github.com/jrudenko)
 
 - Scrum master: [https://github.com/Tisotti](https://github.com/Tisotti)
 
