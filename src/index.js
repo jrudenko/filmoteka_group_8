@@ -17,7 +17,7 @@ import { theme } from './js/components/theme/theme';
 // import { refs } from './js/refs/refs';
 // import { movie__img } from './js/components/modalWindow/modalWindow';
 import { visibleSingleMovieModal } from './js/components/hiddenComponents/hiddenSingleMovieMovieModal';
-
+import './js/templates/firebase-registration';
 import './js/templates/developersModal';
 import './js/templates/scroll';
 import './js/templates/localStorage';
