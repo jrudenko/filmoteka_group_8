@@ -156,7 +156,12 @@
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    
+  @media screen and (max-device-width: 480px) {
+      body {
+        -webkit-text-size-adjust: none;
+      }
+    }
   @media screen and (min-width: 768px) {
     width: 76px;
     height: 22px;
