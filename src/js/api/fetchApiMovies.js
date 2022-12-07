@@ -24,7 +24,7 @@ export class FetchApiMovies {
     this.loadedHits = 0;
   }
   async fetchWithPage(pageNumber) {
-    const tmdbFirstMovieID = this.moviesPerPage * (pageNumber-1);
+    const tmdbFirstMovieID = this.moviesPerPage * (pageNumber - 1);
     let currentId = tmdbFirstMovieID;
 
     let tmdbPages = [];
@@ -32,7 +32,7 @@ export class FetchApiMovies {
       tmdbPages.push(Math.trunc(currentId / 20) + 1);
       currentId += 20;
     }
-    
+
     let pageRequestPromises = tmdbPages.map(tmdbPageNumber => {
       const searchParams = new URLSearchParams({
         api_key: API_KEY,
@@ -42,21 +42,26 @@ export class FetchApiMovies {
       });
       const url = `${BASE_URL}${URL_TRENDING}?${searchParams}`;
       return axios.get(url);
-    })
+    });
 
     hiddenSpinner(false);
     try {
       const responses = await Promise.all(pageRequestPromises);
 
-      const response = responses.map(response => response.data).reduce((accumulatedResponse, response) => {
-        accumulatedResponse.results = accumulatedResponse.results.concat(response.results);
-        return accumulatedResponse;
-      })
+      const response = responses
+        .map(response => response.data)
+        .reduce((accumulatedResponse, response) => {
+          accumulatedResponse.results = accumulatedResponse.results.concat(
+            response.results
+          );
+          return accumulatedResponse;
+        });
 
       response.results = response.results.slice(
-        tmdbFirstMovieID % 20, tmdbFirstMovieID % 20 + this.moviesPerPage
+        tmdbFirstMovieID % 20,
+        (tmdbFirstMovieID % 20) + this.moviesPerPage
       );
-      console.log(tmdbFirstMovieID % 20, tmdbFirstMovieID % 20 + this.moviesPerPage);
+      // console.log(tmdbFirstMovieID % 20, tmdbFirstMovieID % 20 + this.moviesPerPage);
 
       //const response = await axios.get(url);
       this.setQuery('');
