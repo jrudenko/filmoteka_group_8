@@ -1,18 +1,9 @@
 import { refs } from '../refs/refs';
-// import noPosterImage from '../../images/header/no-poster.jpeg';
 
 let imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
-// let noPosterImg = noPosterImage;
 
 export function renderMovieCard(movie) {
   refs.divBackdrop.innerHTML = '';
-
-  // if (movie.poster_path === null) {
-  //   imgBaseUrl = '';
-  //   movie.poster_path = noPosterImg;
-  // } else {
-  //   imgBaseUrl = 'https://image.tmdb.org/t/p/w500/';
-  // }
 
   const movieModal = movieCardTemplate(movie);
 
@@ -80,7 +71,7 @@ function movieCardTemplate({
               Add to Watched
             </button>
             <button class="singleMovieModal-add__button js-deleteWatched hide" type="button">
-              Delate Watched
+              DELETE Watched
             </button>
           </li>
           <li class="singleMovieModal-add__item">
@@ -88,7 +79,7 @@ function movieCardTemplate({
               Add to queue
             </button>
             <button class="singleMovieModal-add__button js-deleteQueue hide" type="button">
-              Delate queue
+              DELETE queue
             </button>
           </li>
           <li class="singleMovieModal-add__item">
